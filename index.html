@@ -324,6 +324,7 @@ h1, h2, h3 {
 .tag.type-planete { color: var(--cyan); border-color: rgba(111, 168, 192, 0.4); }
 .tag.type-lune { color: var(--text-dim); }
 .tag.type-saison { color: var(--text-dim); }
+.tag.type-ceremonie { color: #e0b769; border-color: rgba(224, 183, 105, 0.45); }
 
 /* ---------- Calendar ---------- */
 .cal-controls {
@@ -461,6 +462,15 @@ h1, h2, h3 {
   padding-top: 3px;
 }
 
+.actu-item .actu-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
 .actu-item h3 { font-size: 1.08rem; margin-bottom: 6px; }
 .actu-item p { margin: 0 0 8px; color: var(--text-dim); font-size: 0.95rem; }
 .actu-item .source {
@@ -497,6 +507,15 @@ h1, h2, h3 {
 
 .article-card:hover { border-color: var(--gold-dim); }
 
+.article-card .thumb {
+  display: block;
+  width: calc(100% + 44px);
+  margin: -22px -22px 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
 .article-card .cat {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -532,6 +551,15 @@ h1, h2, h3 {
   padding: 0 0 20px;
 }
 
+.article-detail .hero-image {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 22px 0 4px;
+}
+
 .article-detail h2 { font-size: 1.7rem; margin-bottom: 10px; }
 .article-detail .meta {
   font-family: var(--font-mono);
@@ -548,6 +576,51 @@ h1, h2, h3 {
 .article-detail .body p { color: var(--text); margin: 0 0 14px; }
 .article-detail .body ul { color: var(--text); padding-left: 20px; }
 .article-detail .body li { margin-bottom: 6px; }
+
+/* ---------- Avis lecteurs (fin d'article) ---------- */
+.article-avis {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.avis-question {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin: 0 0 14px;
+}
+
+.avis-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.avis-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.avis-btn:hover { color: var(--gold); border-color: var(--gold); background: var(--surface-2); }
+.avis-btn:focus-visible { color: var(--gold); border-color: var(--gold); }
+
+.avis-merci {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--gold);
+  margin: 0;
+}
 
 .hidden { display: none !important; }
 
@@ -910,6 +983,8 @@ const EVENTS = [
 // 2. ACTUS QUOTIDIENNES (conquête spatiale)
 // -------------------------------------------------------------------------
 // Trie du plus récent au plus ancien : ajoute tes nouvelles actus EN HAUT.
+// image : optionnel — URL d'une image (ex: "image: 'https://.../photo.jpg'").
+// Si tu ne mets rien, aucune image ne s'affiche et il n'y a pas de trou.
 const ACTUS = [
   {
     date: "2026-08-25",
@@ -954,6 +1029,8 @@ const ACTUS = [
 // -------------------------------------------------------------------------
 // categorie : texte libre, ex: "Observation", "Exploration", "Cosmologie"
 // contenu : du HTML simple est autorisé (balises <p>, <h3>, <strong>, <em>, <ul><li>)
+// image : optionnel — URL d'une image (ex: "image: 'https://.../photo.jpg'").
+// Si tu ne mets rien, aucune image ne s'affiche et il n'y a pas de trou.
 const ARTICLES = [
   {
   date: "2026-08-20",
@@ -1003,6 +1080,7 @@ const ARTICLES = [
     date: "2026-08-18",
     categorie: "Cosmologie",
     titre: "La TERRE avait autrefois un anneau !",
+    image: "file:///C:/Users/hugop/Downloads/terre_anneaux_ia.png",
     extrait: "Saturne est une planète très connue pour ses anneaux qui sont au nombre de sept. Elle n'est pas la seule à en posséder, Neptune en a cinq et Jupiter en compte trois. Uranus est la plus fournie avec pas moins de treize anneaux. Ces derniers sont composés de petites particules et de poussières qui sont en orbite autour des planètes. Selon une récente étude dans la revue <a href='https://eps.berkeley.edu/' target= '_blank'>Earth & Planetary Sciences</a>.",
     contenu:`
       <h3>La Terre aurait-elle autrefois possédé un anneau ?</h3>
@@ -1086,13 +1164,26 @@ const ARTICLES = [
  * Tu n'as normalement pas besoin d'y toucher pour ajouter du contenu.
  */
 
+/* -------------------------------------------------------------------- */
+/* Config du formulaire Google (avis lecteurs en fin d'article)         */
+/* Remplace les 4 valeurs ci-dessous par celles de TON formulaire.      */
+/* Voir les instructions fournies pour savoir où les trouver.           */
+/* -------------------------------------------------------------------- */
+const AVIS_FORM_URL = "https://docs.google.com/forms/d/e/VOTRE_ID_DE_FORM/formResponse";
+const AVIS_FORM_FIELDS = {
+  article: "entry.VOTRE_ID_1", // question "Article"
+  date: "entry.VOTRE_ID_2",    // question "Date"
+  avis: "entry.VOTRE_ID_3"     // question "Avis"
+};
+
 const TYPE_LABELS = {
   eclipse: "Éclipse",
   meteores: "Pluie de météores",
   planete: "Planète",
   lune: "Lune",
   saison: "Saison",
-  lancement: "Lancement"
+  lancement: "Lancement",
+  ceremonie: "Cérémonie"
 };
 
 const TYPE_ICONS = {
@@ -1101,7 +1192,8 @@ const TYPE_ICONS = {
   planete: "\u25CB", // ○
   lune: "\u263D", // ☽
   saison: "\u2699", // ⚙ (utilisé comme repère neutre)
-  lancement: "\u25B2" // ▲
+  lancement: "\u25B2", // ▲
+  ceremonie: "\u2605" // ★
 };
 
 const MOIS_FR = [
@@ -1335,6 +1427,7 @@ function renderActus() {
       item.innerHTML = `
         <span class="date-mono">${fmtDateShort(a.date)}</span>
         <div>
+          ${a.image ? `<img class="actu-image" src="${a.image}" alt="" loading="lazy">` : ""}
           <h3>${a.titre}</h3>
           <p>${a.resume}</p>
           <span class="source">${a.source}</span>
@@ -1357,6 +1450,7 @@ function renderArticles() {
       const btn = document.createElement("button");
       btn.className = "article-card";
       btn.innerHTML = `
+        ${a.image ? `<img class="thumb" src="${a.image}" alt="" loading="lazy">` : ""}
         <span class="cat">${a.categorie}</span>
         <h3>${a.titre}</h3>
         <p>${a.extrait}</p>
@@ -1377,13 +1471,82 @@ function openArticle(article) {
     <span class="cat">${article.categorie}</span>
     <h2>${article.titre}</h2>
     <div class="meta">${fmtDateLong(article.date)}</div>
+    ${article.image ? `<img class="hero-image" src="${article.image}" alt="">` : ""}
     <div class="body">${article.contenu}</div>
+    <div class="article-avis">
+      <p class="avis-question">Qu'avez-vous pensé de cet article ?</p>
+      <div class="avis-buttons">
+        <button type="button" class="avis-btn" data-vote="up" aria-label="J'ai aimé cet article">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3v11zM7 11l4.5-8a1.5 1.5 0 0 1 2.7.9v5.1h5.4a2 2 0 0 1 2 2.3l-1.3 8a2 2 0 0 1-2 1.7H7"/></svg>
+        </button>
+        <button type="button" class="avis-btn" data-vote="down" aria-label="Je n'ai pas aimé cet article">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg);"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3v11zM7 11l4.5-8a1.5 1.5 0 0 1 2.7.9v5.1h5.4a2 2 0 0 1 2 2.3l-1.3 8a2 2 0 0 1-2 1.7H7"/></svg>
+        </button>
+      </div>
+      <p class="avis-merci hidden">Merci pour votre avis ! Ça nous aide beaucoup !</p>
+    </div>
   `;
   detail.querySelector(".back-btn").addEventListener("click", () => {
     detail.classList.add("hidden");
     grid.classList.remove("hidden");
   });
+  setupArticleAvis(detail, article);
   detail.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+/* -------------------------------------------------------------------- */
+/* Avis lecteurs (pouce haut / bas en fin d'article)                    */
+/* -------------------------------------------------------------------- */
+function setupArticleAvis(detail, article) {
+  const storageKey = `orbite-avis:${article.date}:${article.titre}`;
+  const question = detail.querySelector(".avis-question");
+  const buttons = detail.querySelector(".avis-buttons");
+  const merci = detail.querySelector(".avis-merci");
+
+  const showMerci = () => {
+    question.classList.add("hidden");
+    buttons.classList.add("hidden");
+    merci.classList.remove("hidden");
+  };
+
+  let alreadyVoted = false;
+  try {
+    alreadyVoted = !!localStorage.getItem(storageKey);
+  } catch (e) {
+    alreadyVoted = false;
+  }
+
+  if (alreadyVoted) {
+    showMerci();
+    return;
+  }
+
+  detail.querySelectorAll(".avis-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const vote = btn.dataset.vote;
+      sendAvisToGoogleForm(article, vote);
+      try {
+        localStorage.setItem(storageKey, vote);
+      } catch (e) {
+        /* stockage indisponible : on affiche quand même le message de remerciement */
+      }
+      showMerci();
+    });
+  });
+}
+
+function sendAvisToGoogleForm(article, vote) {
+  if (!AVIS_FORM_URL || AVIS_FORM_URL.includes("https://forms.gle/mA9NT2bb6nF1mJ2z6")) {
+    // Formulaire pas encore configuré : le vote n'est pas envoyé (voir instructions).
+    return;
+  }
+  const data = new FormData();
+  data.append(AVIS_FORM_FIELDS.article, article.titre);
+  data.append(AVIS_FORM_FIELDS.date, article.date);
+  data.append(AVIS_FORM_FIELDS.avis, vote === "up" ? "👍 Positif" : "👎 Négatif");
+  // mode "no-cors" : on ne peut pas lire la réponse, mais l'envoi fonctionne bien
+  // (c'est la méthode standard pour poster dans un Google Form depuis un site externe).
+  fetch(AVIS_FORMS_URL, { method: "POST", mode: "no-cors", body: data }).catch(() => {});
 }
 
 /* -------------------------------------------------------------------- */
