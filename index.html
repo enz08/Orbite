@@ -866,6 +866,13 @@ h1, h2, h3 {
 // visibilite : texte libre, ex: "Visible depuis la France", "Visible en Europe du Nord"
 const EVENTS = [
    {
+    date: "2026-09-01",
+    type: "planete",
+    titre: "Troisième sortie extravéhiculaire de Sophie Adenot",
+    description: "Sophie Adenot, astronaute de l'ESA, effectuera sa troisième sortie extravéhiculaire lors de l'exercice américain Spacewalk 99. La retransmission en direct de la NASA débutera à 13h (heure de Paris) pour une durée d'environ six heures et demie.",
+    visibilite: "A suivre en direct sur le site <a href='https://plus.nasa.gov/scheduled-video/u-s-spacewalk-99/'>live Nasa</a>" 
+   },
+   {
     date: "2026-08-28",
     type: "ceremonie",
     titre: "Cérémonie de remise des médailles d'honneur spatiale pour les astronautes d'Artemis II",
@@ -987,6 +994,13 @@ const EVENTS = [
 // Si tu ne mets rien, aucune image ne s'affiche et il n'y a pas de trou.
 const ACTUS = [
   {
+    date: "2026-08-28",
+    titre: "Troisième sortie extravéhiculaire de Sophie Adenot",
+    image: "https://www.cieletespace.fr/uploads/editorial-media/2026/08/phpnwhsxk-6a8e00af1c7fa634863850.jpg",
+    resume: "L'astronaute de l'ESA Sophie Adenot effectuera sa troisième sortie extravéhiculaire lors de l'exercice américain Spacewalk 99, le mardi 1er septembre. La retransmission en direct de la NASA débutera à 13h (heure de Paris) pour durer environ six heures et demie.",
+    source: "NASA & ESA"
+  },
+  {
     date: "2026-08-25",
     titre: "Le télescope spatial Roman est prêt à être lancé",
     image: "https://scitechdaily.com/images/NASA-Nancy-Grace-Roman-Space-Telescope-scaled.jpg",
@@ -1038,6 +1052,70 @@ const ACTUS = [
 // image : optionnel — URL d'une image (ex: "image: 'https://.../photo.jpg'").
 // Si tu ne mets rien, aucune image ne s'affiche et il n'y a pas de trou.
 const ARTICLES = [
+  {
+  date: "2026-08-29",
+  categorie: "Trous noirs",
+  titre: "Les trous noirs sont-ils vraiment des “aspirateurs cosmiques” ?",
+  image: "https://champagne.kidiklik.fr/sites/default/files/styles/crop_image/public/2023-07/csm_black-hole-fromthegrapewine_9a0ece1405_1.jpg?itok=ZCxKoXLc",
+  extrait: "Les trous noirs sont souvent représentés comme d’immenses aspirateurs capables d’engloutir tout ce qui les entoure. Pourtant, cette image est trompeuse. Leur gravité est extrême, mais un trou noir ne se comporte pas comme un aspirateur géant.",
+  contenu:`
+    <h3>Un trou noir n’aspire pas tout ce qui l’entoure</h3>
+    <p>Dans les films et les jeux vidéo, les trous noirs sont souvent représentés comme des objets qui aspirent tout autour d’eux. En réalité, leur comportement est beaucoup plus subtil.</p>
+
+    <p>Un trou noir possède une gravité extrêmement forte parce qu’une grande quantité de matière est concentrée dans une région très compacte. Mais à une distance donnée, son attraction gravitationnelle dépend toujours de sa masse, comme pour les autres objets célestes.</p>
+
+    <h3>Et si le Soleil devenait un trou noir ?</h3>
+    <p>Imaginons, de manière totalement hypothétique, que le Soleil soit remplacé par un trou noir possédant exactement la même masse.</p>
+
+    <p>Les planètes ne seraient pas immédiatement aspirées. La Terre continuerait à orbiter autour de cet objet avec une trajectoire globalement similaire à celle qu’elle suit actuellement.</p>
+
+    <p>Le véritable problème serait l’absence de lumière et de chaleur provenant du Soleil, et non une aspiration soudaine de la Terre.</p>
+
+    <h3>L’horizon des événements</h3>
+    <p>La caractéristique la plus célèbre d’un trou noir est son <strong>horizon des événements</strong>. Il s’agit d’une limite autour du trou noir au-delà de laquelle il devient impossible de revenir vers l’extérieur.</p>
+
+    <p>Même la lumière ne peut pas s’en échapper une fois cette frontière franchie. C’est pour cette raison que nous ne pouvons pas observer directement l’intérieur d’un trou noir.</p>
+
+    <h3>Pourquoi sont-ils si dangereux ?</h3>
+    <p>Plus on s’approche d’un trou noir, plus les effets gravitationnels peuvent devenir extrêmes. La différence de gravité entre deux parties d’un même objet peut alors être gigantesque.</p>
+
+    <p>Ces forces peuvent étirer fortement la matière. Ce phénomène est parfois surnommé <strong>spaghettification</strong>.</p>
+
+    <p>Les trous noirs ne sont donc pas des aspirateurs cosmiques. Ils sont plutôt des régions de l’espace où la gravité est devenue tellement intense que la structure même de l’espace-temps est profondément affectée. 🕳️</p>
+  `
+  },
+  {
+  date: "2026-08-29",
+  categorie: "Cosmologie",
+  titre: "Pourquoi l’Univers est-il en expansion ? Et vers quoi s’étend-il ?",
+  image: "https://sciencespourtous.univ-lyon1.fr/files/2021/03/Etoiles-univers_MChuniaud.jpg",
+  extrait: "Depuis près d’un siècle, les astronomes savent que l’Univers est en expansion. Les galaxies lointaines s’éloignent globalement les unes des autres. Mais si l’Univers grandit, vers quoi s’étend-il ? La réponse est bien plus étrange qu’une simple explosion dans l’espace.",
+  contenu:`
+    <h3>L’Univers n’est pas immobile</h3>
+    <p>Au début du XXe siècle, les astronomes ont découvert que les galaxies lointaines présentent un phénomène étonnant : plus elles sont éloignées, plus leur lumière indique généralement qu’elles s’éloignent rapidement de nous.</p>
+
+    <p>Cette observation a conduit à une idée fondamentale de la cosmologie moderne : <strong>l’Univers est en expansion</strong>.</p>
+
+    <h3>Une explosion dans l’espace ?</h3>
+    <p>Il est facile d’imaginer le Big Bang comme une gigantesque explosion qui aurait projeté des galaxies dans un espace déjà existant. Pourtant, cette représentation est trompeuse.</p>
+
+    <p>Le Big Bang correspond plutôt à une phase extrêmement chaude et dense de l’histoire de l’Univers, durant laquelle l’espace lui-même a commencé à évoluer et à s’étendre.</p>
+
+    <h3>Alors, vers quoi l’Univers s’étend-il ?</h3>
+    <p>La question suppose qu’il existe un espace extérieur dans lequel l’Univers pourrait grandir. Or, dans les modèles cosmologiques actuels, l’expansion concerne directement <strong>l’espace lui-même</strong>.</p>
+
+    <p>Une comparaison souvent utilisée consiste à imaginer des points dessinés sur un ballon que l’on gonfle. Les points s’éloignent les uns des autres parce que la surface du ballon s’étend.</p>
+
+    <p>Cette comparaison a ses limites, mais elle permet de comprendre pourquoi l’expansion ne nécessite pas forcément un « extérieur » vers lequel l’Univers se développerait.</p>
+
+    <h3>Existe-t-il un centre de l’Univers ?</h3>
+    <p>Non, pas dans le sens d’un point central à partir duquel toutes les galaxies seraient projetées. À grande échelle, l’expansion est observée dans toutes les directions.</p>
+
+    <p>Et cette expansion ne semble pas ralentir. Les observations indiquent même qu’elle s’accélère, un phénomène généralement associé à ce que les scientifiques appellent <strong>l’énergie sombre</strong>.</p>
+
+    <p>L’expansion de l’Univers reste donc l’un des grands mystères de la cosmologie. Nous savons qu’elle se produit, mais nous ne comprenons pas encore complètement la nature de ce qui la provoque. 🌌</p>
+  `
+  },
   {
   date: "2026-08-20",
   categorie: "Lune",
