@@ -736,6 +736,198 @@ h1, h2, h3 {
 </header>
 
 <main id="main">
+  <!-- Photo anniversaire -->
+  <style>
+  .apod-widget {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: system-ui, -apple-system, sans-serif;
+    text-align: center;
+  }
+
+  .apod-widget h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  .apod-widget .apod-form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .apod-widget input[type="date"] {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    background: #161b22;
+    color: #e6edf3;
+    font-size: 1rem;
+  }
+
+  .apod-widget button {
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    border: none;
+    background: #2f81f7;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .apod-widget button:hover {
+    background: #1f6feb;
+  }
+
+  .apod-widget button:disabled {
+    background: #30363d;
+    cursor: not-allowed;
+  }
+
+  .apod-result img,
+  .apod-result iframe {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: block;
+  }
+
+  .apod-result h3 {
+    margin: 1rem 0 0.25rem;
+    font-size: 1.1rem;
+  }
+
+  .apod-result .apod-date {
+    color: #8b949e;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .apod-result p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #c9d1d9;
+    text-align: left;
+  }
+
+  .apod-result .apod-copyright {
+    font-size: 0.75rem;
+    color: #8b949e;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .apod-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #f0883e;
+  }
+
+  .apod-loading {
+    margin-top: 1rem;
+    color: #8b949e;
+    font-size: 0.9rem;
+  }
+</style>
+
+<div class="apod-widget">
+  <h2>🔭 La photo spatiale du jour de ta naissance</h2>
+  <div class="apod-form">
+    <input type="date" id="apod-date-input" min="1995-06-16" />
+    <button id="apod-submit-btn">Voir la photo</button>
+  </div>
+  <div id="apod-output"></div>
+</div>
+
+<script>
+(function () {
+  const NASA_API_KEY = "YtqCr3isKxqSFE40djrFEKhDnZ3stmkoYMSq3B1z";
+
+  const dateInput = document.getElementById("apod-date-input");
+  const submitBtn = document.getElementById("apod-submit-btn");
+  const output = document.getElementById("apod-output");
+
+  // Bloque les dates futures et antérieures au 16 juin 1995
+  const today = new Date().toISOString().slice(0, 10);
+  dateInput.max = today;
+
+  submitBtn.addEventListener("click", async () => {
+    const date = dateInput.value;
+
+    if (!date) {
+      output.innerHTML = `<p class="apod-message">Choisis une date pour continuer.</p>`;
+      return;
+    }
+
+    submitBtn.disabled = true;
+    output.innerHTML = `<p class="apod-loading">Chargement de l'image NASA...</p>`;
+
+    try {
+      const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&date=${date}`;
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        if (response.status === 400) {
+          output.innerHTML = `<p class="apod-message">Aucune photo disponible pour cette date : les archives de la NASA commencent le 16 juin 1995.</p>`;
+        } else if (response.status === 429) {
+          output.innerHTML = `<p class="apod-message">Trop de requêtes ont été envoyées à l'API NASA. Réessaie un peu plus tard.</p>`;
+        } else {
+          output.innerHTML = `<p class="apod-message">Une erreur est survenue (code ${response.status}). Réessaie plus tard.</p>`;
+        }
+        return;
+      }
+
+      const data = await response.json();
+      renderApod(data);
+    } catch (err) {
+      output.innerHTML = `<p class="apod-message">Impossible de contacter l'API NASA. Vérifie ta connexion et réessaie.</p>`;
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  function renderApod(data) {
+    const isVideo = data.media_type === "video";
+
+    const mediaHtml = isVideo
+      ? `<iframe src="${data.url}" frameborder="0" allowfullscreen height="340"></iframe>`
+      : `<img src="${data.hdurl || data.url}" alt="${escapeHtml(data.title)}" loading="lazy" />`;
+
+    const copyrightHtml = data.copyright
+      ? `<p class="apod-copyright">© ${escapeHtml(data.copyright.trim())}</p>`
+      : "";
+
+    output.innerHTML = `
+      <div class="apod-result">
+        ${mediaHtml}
+        <h3>${escapeHtml(data.title)}</h3>
+        <div class="apod-date">${formatDateFr(data.date)}</div>
+        <p>${escapeHtml(data.explanation)}</p>
+        ${copyrightHtml}
+      </div>
+    `;
+  }
+
+  function formatDateFr(isoDate) {
+    const [year, month, day] = isoDate.split("-");
+    return `${day}/${month}/${year}`;
+  }
+
+  // Sécurité : évite l'injection HTML via les champs texte renvoyés par l'API
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+})();
+</script>
 
   <!-- ACCUEIL -->
   <section class="hero" id="accueil-hero">
