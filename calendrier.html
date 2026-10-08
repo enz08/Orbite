@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendrier des événements célestes — Orbite</title>
+<meta name="description" content="Éclipses, pluies de météores, oppositions planétaires et saisons : le calendrier des événements célestes à venir.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Orbite">
+<link rel="canonical" href="https://www.orbite.kdns.fr/calendrier">
+
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orbite">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://www.orbite.kdns.fr/calendrier">
+<meta property="og:title" content="Calendrier des événements célestes — Orbite">
+<meta property="og:description" content="Éclipses, pluies de météores, oppositions planétaires et saisons : le calendrier des événements célestes à venir.">
+<meta property="og:image" content="https://www.orbite.kdns.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbite — almanach du ciel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calendrier des événements célestes — Orbite">
+<meta name="twitter:description" content="Éclipses, pluies de météores, oppositions planétaires et saisons : le calendrier des événements célestes à venir.">
+<meta name="twitter:image" content="https://www.orbite.kdns.fr/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="theme-color" content="#0b0e17">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/orbite.css">
+</head>
+<body data-page="calendrier">
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="section" id="calendrier">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Calendrier</span>
+          <h1>Événements célestes</h1>
+          <p class="desc">Éclipses, pluies de météores, oppositions planétaires et saisons. Clique un jour marqué pour voir le détail.</p>
+        </div>
+      </div>
+
+      <div class="cal-controls">
+        <button id="cal-prev" aria-label="Mois précédent">&larr;</button>
+        <span class="cal-month-label" id="cal-month-label"></span>
+        <button id="cal-next" aria-label="Mois suivant">&rarr;</button>
+      </div>
+
+      <div class="cal-grid" id="cal-grid"></div>
+
+      <h3 id="event-list-heading" style="font-size:1.05rem; margin-bottom:16px; color: var(--text-dim); font-family: var(--font-mono); font-weight:400;"></h3>
+      <div class="event-list" id="event-list"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<div id="site-chat"></div>
+
+<script src="/data-events.js"></script>
+<script src="/data-actus.js"></script>
+<script src="/data-articles.js"></script>
+<script src="/site.js"></script>
+<script src="/page-calendrier.js"></script>
+</body>
+</html>

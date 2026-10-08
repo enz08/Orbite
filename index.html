@@ -2,27 +2,28 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<script>
-  // Toute sous-page (/calendrier, /actus…) rebondit ici via 404.html : on remet une URL propre.
-  if (window.location.search[1] === "p") {
-    window.history.replaceState(null, null, "/");
-  }
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maintenance en cours — Orbite</title>
-<meta name="description" content="Orbite est momentanément en maintenance. Le site revient très bientôt.">
-<meta name="robots" content="noindex, nofollow">
+<title>Orbite — Calendrier astronomique, actus spatiales et articles</title>
+<meta name="description" content="Éclipses, pluies de météores et oppositions planétaires à ne pas manquer, actus quotidiennes de la conquête spatiale et articles pour observer le ciel, réunis sur Orbite.">
+<meta name="robots" content="index, follow">
 <meta name="author" content="Orbite">
 <link rel="canonical" href="https://www.orbite.kdns.fr/">
 
-<!-- Open Graph -->
+<!-- Open Graph / réseaux sociaux -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Orbite">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://www.orbite.kdns.fr/">
-<meta property="og:title" content="Maintenance en cours — Orbite">
-<meta property="og:description" content="Orbite est momentanément en maintenance. Le site revient très bientôt.">
+<meta property="og:title" content="Orbite — Calendrier astronomique, actus spatiales et articles">
+<meta property="og:description" content="Éclipses, pluies de météores et oppositions planétaires à ne pas manquer, actus quotidiennes de la conquête spatiale et articles pour observer le ciel, réunis sur Orbite.">
 <meta property="og:image" content="https://www.orbite.kdns.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbite — almanach du ciel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orbite — Calendrier astronomique, actus spatiales et articles">
+<meta name="twitter:description" content="Éclipses, pluies de météores et oppositions planétaires à ne pas manquer, actus quotidiennes de la conquête spatiale et articles pour observer le ciel, réunis sur Orbite.">
+<meta name="twitter:image" content="https://www.orbite.kdns.fr/og-image.png">
 
 <!-- Favicons -->
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -34,444 +35,66 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-/* =========================================================================
-   ORBITE — page de maintenance
-   Mêmes variables, polices et ambiance que le site principal
-   ========================================================================= */
-
-:root {
-  --bg: #0b0e17;
-  --surface: #131826;
-  --surface-2: #1a2133;
-  --line: rgba(231, 228, 218, 0.11);
-  --line-strong: rgba(231, 228, 218, 0.22);
-  --text: #e8e5da;
-  --text-dim: #8d93a6;
-  --gold: #d3a85c;
-  --gold-dim: #a9884b;
-  --cyan: #6fa8c0;
-  --red: #c26a5a;
-
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-
-  --radius: 3px;
-  --max-width: 1080px;
+<meta name="google-site-verification" content="3LD3MNUeXDmBFfON5V_IlqPoOnMGpF0L9_zF2TMhWlU" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Orbite",
+  "url": "https://www.orbite.kdns.fr/",
+  "description": "Calendrier des événements célestes, actus quotidiennes de la conquête spatiale et articles d'astronomie.",
+  "inLanguage": "fr-FR"
 }
-
-* { box-sizing: border-box; }
-
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
-}
-
-html, body { height: 100%; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-a { color: inherit; }
-
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 0;
-}
-
-.wrap {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  width: 100%;
-}
-
-:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-}
-
-/* ---------- Header ---------- */
-.site-header {
-  position: relative;
-  z-index: 10;
-  background: rgba(11, 14, 23, 0.88);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-
-.site-header .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 68px;
-}
-
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  text-decoration: none;
-  color: var(--text);
-}
-
-.logo .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 8px 1px var(--gold);
-  flex-shrink: 0;
-}
-
-.header-status {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header-status .pulse {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--red);
-  box-shadow: 0 0 8px 1px var(--red);
-  animation: pulse 2.2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
-}
-
-/* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  overflow: hidden;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-#stars-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-}
-
-.hero-inner {
-  position: relative;
-  padding-top: 72px;
-  padding-bottom: 72px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  align-items: center;
-  gap: 48px;
-}
-
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--gold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 18px;
-}
-
-.hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  max-width: 14ch;
-  line-height: 1.08;
-}
-
-.hero p.lead {
-  max-width: 46ch;
-  color: var(--text-dim);
-  margin: 18px 0 0;
-  font-size: 1.05rem;
-}
-
-.status-card {
-  margin-top: 36px;
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
-  padding: 14px 20px;
-  background: rgba(19, 24, 38, 0.6);
-  backdrop-filter: blur(6px);
-}
-
-.status-card .label {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.status-card .value {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
-.status-card .sep {
-  width: 1px;
-  align-self: stretch;
-  background: var(--line-strong);
-}
-
-.actions {
-  margin-top: 28px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.btn {
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  font-weight: 500;
-  padding: 11px 20px;
-  border-radius: var(--radius);
-  border: 1px solid var(--gold);
-  background: var(--gold);
-  color: #14140f;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.btn:hover { background: #e0b96f; border-color: #e0b96f; }
-
-.btn--ghost {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--line-strong);
-}
-
-.btn--ghost:hover {
-  background: var(--surface);
-  border-color: var(--gold-dim);
-  color: var(--gold);
-}
-
-/* ---------- Illustration orbitale ---------- */
-.orbit-art {
-  position: relative;
-  width: 100%;
-  max-width: 380px;
-  aspect-ratio: 1;
-  margin: 0 auto;
-}
-
-.orbit-art svg { width: 100%; height: 100%; overflow: visible; }
-
-.orbit-ring {
-  fill: none;
-  stroke: var(--line-strong);
-  stroke-width: 1;
-}
-
-.orbit-ring--dash { stroke-dasharray: 2 6; stroke: var(--line-strong); }
-
-.orbiter {
-  transform-origin: 200px 200px;
-  animation: spin 22s linear infinite;
-}
-.orbiter--slow { animation-duration: 40s; animation-direction: reverse; }
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.core {
-  fill: var(--surface-2);
-  stroke: var(--gold-dim);
-  stroke-width: 1;
-}
-
-.core-glow { fill: var(--gold); opacity: 0.9; filter: drop-shadow(0 0 8px var(--gold)); }
-.sat-gold { fill: var(--gold); filter: drop-shadow(0 0 6px var(--gold)); }
-.sat-cyan { fill: var(--cyan); filter: drop-shadow(0 0 5px var(--cyan)); }
-
-/* ---------- Footer ---------- */
-.site-footer {
-  position: relative;
-  z-index: 10;
-  border-top: 1px solid var(--line);
-  background: var(--bg);
-  padding: 24px 0 28px;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-}
-
-.site-footer .wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.site-footer a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; }
-.site-footer a:hover { color: var(--gold); }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 820px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    padding-top: 48px;
-    padding-bottom: 56px;
-  }
-  .orbit-art { max-width: 260px; order: -1; }
-  .status-card { flex-wrap: wrap; }
-}
-</style>
+</script>
+<link rel="stylesheet" href="/orbite.css">
 </head>
-<body>
+<body data-page="accueil">
+<div id="site-header"></div>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="logo" href="/">
-      <span class="dot" aria-hidden="true"></span>
-      Orbite
-    </a>
-    <span class="header-status" role="status">
-      <span class="pulse" aria-hidden="true"></span>
-      Maintenance
-    </span>
-  </div>
-</header>
+<main id="main">
+  <section class="hero" id="accueil-hero">
+    <canvas id="stars-canvas" aria-hidden="true"></canvas>
 
-<main class="hero" id="main">
-  <canvas id="stars-canvas" aria-hidden="true"></canvas>
+    <div class="smart-menu" id="smart-menu" aria-label="Actualités et évènements à la une">
+      <div class="smart-menu-track" id="smart-menu-track"></div>
+    </div>
 
-  <div class="wrap hero-inner">
-    <div>
-      <span class="hero-eyebrow">Almanach du ciel · Hors ligne</span>
-      <h1>Orbite fait une brève manœuvre.</h1>
-      <p class="lead">
-        Le site est momentanément en maintenance : nous peaufinons quelques réglages
-        pour vous offrir un ciel plus net. Merci de votre patience, nous revenons très vite.
-      </p>
-
-      <div class="status-card" role="status">
+    <div class="wrap hero-inner">
+      <span class="hero-eyebrow">Almanach du ciel</span>
+      <h1>Suivre le ciel et la conquête spatiale, sans bruit inutile.</h1>
+      <p>Un calendrier des événements célestes, les actus quotidiennes de l'exploration spatiale et des articles pour observer mieux — réunis au même endroit.</p>
+      <div class="hero-next">
         <div>
-          <span class="label">Statut</span>
-          <span class="value">Maintenance en cours</span>
+          <span class="label">Prochain événement</span>
+          <span class="value" id="hero-next-value">Chargement…</span>
         </div>
-        <span class="sep" aria-hidden="true"></span>
-        <div>
-          <span class="label">Retour estimé</span>
-          <span class="value">Très bientôt</span>
-        </div>
-      </div>
-
-      <div class="actions">
-        <button type="button" class="btn" onclick="window.location.replace('/')">Réessayer</button>
       </div>
     </div>
 
-    <div class="orbit-art" aria-hidden="true">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <circle class="orbit-ring" cx="200" cy="200" r="90"/>
-        <circle class="orbit-ring orbit-ring--dash" cx="200" cy="200" r="140"/>
-        <circle class="orbit-ring" cx="200" cy="200" r="185"/>
-
-        <circle class="core" cx="200" cy="200" r="34"/>
-        <circle class="core-glow" cx="200" cy="200" r="5"/>
-
-        <g class="orbiter">
-          <circle class="sat-gold" cx="290" cy="200" r="6"/>
-        </g>
-        <g class="orbiter orbiter--slow">
-          <circle class="sat-cyan" cx="200" cy="60" r="4.5"/>
-        </g>
-        <g class="orbiter" style="animation-duration: 60s;">
-          <circle cx="385" cy="200" r="3" fill="#e8e5da"/>
-        </g>
-      </svg>
+    <div class="apod-section">
+      <div class="wrap">
+        <div class="apod-head">
+          <span class="kicker">Photo NASA</span>
+          <h2>Le ciel le jour de ta naissance</h2>
+          <p>La NASA publie une photo astronomique commentée chaque jour depuis 1995. Entre ta date de naissance pour retrouver la tienne.</p>
+        </div>
+        <div class="apod-form">
+          <input type="date" id="apod-date-input" min="1995-06-16" />
+          <button id="apod-submit-btn">Voir la photo</button>
+        </div>
+        <div id="apod-output"></div>
+      </div>
     </div>
-  </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>Orbite © <span id="year-now"></span> — site personnel d'astronomie</span>
-    <span><a href="/mentions-legales.html">Mentions légales</a> · Fait main, hébergé sur GitHub Pages</span>
-  </div>
-</footer>
+<div id="site-footer"></div>
+<div id="site-chat"></div>
 
-<script>
-document.getElementById("year-now").textContent = new Date().getFullYear();
-
-/* Ciel étoilé — même rendu que sur la page d'accueil */
-(function drawStars() {
-  const canvas = document.getElementById("stars-canvas");
-  const ctx = canvas.getContext("2d");
-  let w, h, stars;
-
-  function resize() {
-    w = canvas.width = canvas.offsetWidth;
-    h = canvas.height = canvas.offsetHeight;
-    const count = Math.floor((w * h) / 4500);
-    stars = Array.from({ length: count }, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      r: Math.random() * 1.2 + 0.2,
-      p: Math.random() * Math.PI * 2,
-      speed: Math.random() * 0.015 + 0.004
-    }));
-  }
-
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function draw(t) {
-    ctx.clearRect(0, 0, w, h);
-    for (const s of stars) {
-      const twinkle = reduceMotion ? 1 : 0.55 + 0.45 * Math.sin(s.p + t * s.speed);
-      ctx.globalAlpha = twinkle;
-      ctx.fillStyle = "#e8e5da";
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-    if (!reduceMotion) requestAnimationFrame(draw);
-  }
-
-  window.addEventListener("resize", resize);
-  resize();
-  requestAnimationFrame(draw);
-})();
-</script>
+<script src="/data-events.js"></script>
+<script src="/data-actus.js"></script>
+<script src="/data-articles.js"></script>
+<script src="/site.js"></script>
+<script src="/page-home.js"></script>
 </body>
 </html>
