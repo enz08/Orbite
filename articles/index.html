@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles d'astronomie — Orbite</title>
+<meta name="description" content="Guides d'observation, matériel, missions expliquées — pour progresser à son rythme.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Orbite">
+<link rel="canonical" href="https://www.orbite.kdns.fr/articles/">
+
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orbite">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://www.orbite.kdns.fr/articles/">
+<meta property="og:title" content="Articles d'astronomie — Orbite">
+<meta property="og:description" content="Guides d'observation, matériel, missions expliquées — pour progresser à son rythme.">
+<meta property="og:image" content="https://www.orbite.kdns.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbite — almanach du ciel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Articles d'astronomie — Orbite">
+<meta name="twitter:description" content="Guides d'observation, matériel, missions expliquées — pour progresser à son rythme.">
+<meta name="twitter:image" content="https://www.orbite.kdns.fr/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="theme-color" content="#0b0e17">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/orbite.css">
+</head>
+<body data-page="articles">
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="section" id="articles">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Articles</span>
+          <h1>Comprendre et observer</h1>
+          <p class="desc">Guides d'observation, matériel, missions expliquées — pour progresser à son rythme.</p>
+        </div>
+      </div>
+      <div class="article-search">
+        <input type="search" id="article-search-input" placeholder="Rechercher un article (titre, thème, sujet…)" aria-label="Rechercher un article">
+      </div>
+      <div class="article-grid" id="article-grid"></div>
+
+      <div class="sujet-box" id="sujet-box">
+        <h3>Un sujet en tête ?</h3>
+        <p class="sujet-desc">Dis-nous de quoi tu aimerais qu'on parle dans le prochain article : une planète, une mission, du matériel, une notion qui t'intrigue…</p>
+        <form class="sujet-form" id="sujet-form" novalidate>
+          <textarea id="sujet-input" maxlength="300" placeholder="Ex. : comment photographier la Voie lactée avec un smartphone ?" aria-label="Sujet souhaité pour le prochain article"></textarea>
+          <input type="text" id="sujet-hp" class="sujet-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="sujet-actions">
+            <button type="submit" class="sujet-btn" id="sujet-btn">Proposer ce sujet</button>
+            <span class="sujet-count" id="sujet-count">0 / 300</span>
+          </div>
+          <p class="sujet-msg hidden" id="sujet-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<div id="site-chat"></div>
+
+<script src="/data-events.js"></script>
+<script src="/data-actus.js"></script>
+<script src="/data-articles.js"></script>
+<script src="/site.js"></script>
+<script src="/page-articles.js"></script>
+</body>
+</html>
