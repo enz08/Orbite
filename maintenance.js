@@ -11,8 +11,8 @@
    qui désactive JavaScript). C'est un écran « on revient bientôt ».
    ========================================================================= */
 (function () {
-  var MAINTENANCE = true;
-  var RETOUR = "Très bientôt";   // texte du « Retour estimé »
+  var MAINTENANCE = false;
+  var RETOUR = "18h";   // texte du « Retour estimé »
 
   if (!MAINTENANCE) return;
 
