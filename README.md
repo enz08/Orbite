@@ -32,3 +32,10 @@ Pour ajouter une entrée de menu : modifier le tableau `NAV` de `site.js`.
 
 Pousser tous les fichiers à la racine du dépôt. GitHub Pages sert `articles/0013.html` à l'adresse `/articles/0013`.
 Supprimer l'ancien script de redirection de `404.html` (remplacé par la nouvelle page 404).
+
+## Mode maintenance
+
+Tout est dans `maintenance.js` (une seule ligne à changer : `MAINTENANCE = true` ou `false`).
+Chaque page charge ce fichier dans son `<head>`, donc TOUTES les pages sont couvertes.
+Aperçu du vrai site pendant la maintenance : ajouter `?apercu=1` à n'importe quelle adresse (`?apercu=0` pour quitter).
+Ce n'est pas un verrou de sécurité, seulement un écran d'attente.
