@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbite — Calendrier astronomique, actus spatiales et articles</title>
+<meta name="description" content="Éclipses, pluies de météores et oppositions planétaires à ne pas manquer, actus quotidiennes de la conquête spatiale et articles pour observer le ciel, réunis sur Orbite.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Orbite">
+<link rel="canonical" href="https://www.orbite.kdns.fr/">
+
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orbite">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://www.orbite.kdns.fr/">
+<meta property="og:title" content="Orbite — Calendrier astronomique, actus spatiales et articles">
+<meta property="og:description" content="Éclipses, pluies de météores et oppositions planétaires à ne pas manquer, actus quotidiennes de la conquête spatiale et articles pour observer le ciel, réunis sur Orbite.">
+<meta property="og:image" content="https://www.orbite.kdns.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbite — almanach du ciel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orbite — Calendrier astronomique, actus spatiales et articles">
+<meta name="twitter:description" content="Éclipses, pluies de météores et oppositions planétaires à ne pas manquer, actus quotidiennes de la conquête spatiale et articles pour observer le ciel, réunis sur Orbite.">
+<meta name="twitter:image" content="https://www.orbite.kdns.fr/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<meta name="theme-color" content="#0b0e17">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="3LD3MNUeXDmBFfON5V_IlqPoOnMGpF0L9_zF2TMhWlU" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Orbite",
+  "url": "https://www.orbite.kdns.fr/",
+  "description": "Calendrier des événements célestes, actus quotidiennes de la conquête spatiale et articles d'astronomie.",
+  "inLanguage": "fr-FR"
+}
+</script>
+<link rel="stylesheet" href="/assets/orbite.css">
+</head>
+<body data-page="accueil">
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="hero" id="accueil-hero">
+    <canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+    <div class="smart-menu" id="smart-menu" aria-label="Actualités et évènements à la une">
+      <div class="smart-menu-track" id="smart-menu-track"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <span class="hero-eyebrow">Almanach du ciel</span>
+      <h1>Suivre le ciel et la conquête spatiale, sans bruit inutile.</h1>
+      <p>Un calendrier des événements célestes, les actus quotidiennes de l'exploration spatiale et des articles pour observer mieux — réunis au même endroit.</p>
+      <div class="hero-next">
+        <div>
+          <span class="label">Prochain événement</span>
+          <span class="value" id="hero-next-value">Chargement…</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="apod-section">
+      <div class="wrap">
+        <div class="apod-head">
+          <span class="kicker">Photo NASA</span>
+          <h2>Le ciel le jour de ta naissance</h2>
+          <p>La NASA publie une photo astronomique commentée chaque jour depuis 1995. Entre ta date de naissance pour retrouver la tienne.</p>
+        </div>
+        <div class="apod-form">
+          <input type="date" id="apod-date-input" min="1995-06-16" />
+          <button id="apod-submit-btn">Voir la photo</button>
+        </div>
+        <div id="apod-output"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<div id="site-chat"></div>
+
+<script src="/data/events.js"></script>
+<script src="/data/actus.js"></script>
+<script src="/data/articles.js"></script>
+<script src="/assets/site.js"></script>
+<script src="/assets/home.js"></script>
+</body>
+</html>
