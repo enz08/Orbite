@@ -24,7 +24,7 @@ const EVENTS = [
     visibilite: "Conditions de visibilité : Très bonnes mais nécessitant des instruments. Le phénomène sera facilement repérable car la Lune servira de guide. Cependant, la Lune sera brillante (pleine à environ 75%), ce qui signifie que son éclat va masquer les étoiles les plus faibles à l'œil nu. Pour apprécier pleinement la disparition et la réapparition successive des étoiles bleues derrière le disque lunaire, l'utilisation de jumelles ou d'un petit télescope est fortement recommandé. Visible à partir de 00h jusqu'a 6h00 du matin (heure de Paris), mais le moment le plus spectaculaire est attendu aux alentours de 3h30 du matin.",
    },
    {
-    date: "2026-10-8",
+    date: "2026-10-08",
     type: "meteores",
     titre: "Essaim des Draconides",
     description: "Activité de la pluie d'étoiles filantes issue de la comète 21P/Giacobini-Zinner, visible en début de nuit dans le ciel nordique.",
