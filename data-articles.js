@@ -15,6 +15,13 @@
  */
 const ARTICLES = [
   {
+    id: "0015",
+    date: "2026-10-10",
+    categorie: "Système Solaire",
+    image: "https://storage.ghost.io/c/d0/6f/d06f3f13-bb97-4d11-a063-07ea8f7bc595/content/images/size/w1140/2026/03/naine-blanche.webp",
+    extrait: "Le Soleil semble éternel, mais comme toutes les étoiles, il finira par évoluer. Dans plusieurs milliards d’années, il deviendra une géante rouge avant de rejeter ses couches externes et de terminer sa vie sous la forme d’une naine blanche."
+  },
+  {
     id: "0014",
     date: "2026-10-09",
     categorie: "Exobiologie",
