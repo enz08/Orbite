@@ -15,6 +15,14 @@
  */
 const ARTICLES = [
   {
+    id: "0014",
+    date: "2026-10-09",
+    categorie: "Exobiologie",
+    titre: "Comment trouver une civilisation extraterrestre ?",
+    image: "https://www.journaldugeek.com/app/uploads/2026/06/Alien-IA.jpg",
+    extrait: "Sommes-nous seuls dans l’Univers ? Des ondes radio mystérieuses aux traces possibles d’une technologie extraterrestre, les scientifiques explorent des pistes fascinantes pour détecter d’autres civilisations. SETI, sphères de Dyson, atmosphères d’exoplanètes… Découvrez comment l’humanité tente de percer l’un des plus grands mystères du cosmos."
+  },
+  {
     id: "0013",
     date: "2026-10-06",
     categorie: "Trous de ver",
