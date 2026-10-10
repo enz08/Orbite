@@ -15,6 +15,14 @@
  */
 const ARTICLES = [
   {
+    id: "0016",
+    date: "2026-10-10",
+    categorie: "Physique",
+    titre: "Pourquoi le temps ne s’écoule-t-il pas de la même façon partout ?",
+    image: "https://img.src.ca/2011/05/05/635x357/110505_0083m_einstein-effet-geodetique_sn635.jpg",
+    extrait: "Nous avons l’impression que le temps s’écoule au même rythme pour tout le monde. Pourtant, la relativité d’Einstein montre que le temps peut passer différemment selon la vitesse d’un objet et l’intensité de la gravité à laquelle il est soumis."
+  },
+  {
     id: "0015",
     date: "2026-10-10",
     categorie: "Système Solaire",
