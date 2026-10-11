@@ -8,6 +8,20 @@
  */
 const ACTUS = [
   {
+    date: "2026-10-08",
+    titre: "Margaret Hamilton, l’informaticienne d’Apollo, nous a quittés",
+    image: "https://www.cite-espace.com/assets/uploads/hamilton-titre001.jpeg",
+    resume: "Née en 1936, l’informaticienne Margaret Hamilton a dirigé l’équipe en charge des logiciels du programme Apollo, notamment celui qui a permis de se poser sur la Lune. Elle nous a quittés le 30 septembre 2026.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
+    date: "2026-09-30",
+    titre: "La NASA annonce l’échec de sa périlleuse mission de sauvetage du télescope scientifique Swift",
+    image: "https://img.lemde.fr/2026/08/11/0/0/5226/3527/960/0/75/0/eafc05a_ftp-1-bccxqtg9vqza-2026-08-11t165911z-1171446787-rc2bwmam1wud-rtrmadp-3-solar-eclipse-iceland-nasa.JPG",
+    resume: "Un robot spatial devait rejoindre le télescope vieillissant, s’y agripper puis relever son orbite afin de prolonger sa mission scientifique. Faute d’une intervention réussie, Swift poursuivra sa lente descente avant de se désintégrer dans l’atmosphère terrestre.",
+    source: "Le Monde"
+  },
+  {
     date: "2026-09-28",
     titre: "En théorie, l'espace est parfait pour accueillir des data centers",
     image: "https://img.lemde.fr/2026/09/28/0/0/7388/4739/1112/0/75/0/28b71c9_upload-1-is41ot09k773-000-a22n9bm.jpg",
