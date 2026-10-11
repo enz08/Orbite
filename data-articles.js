@@ -15,6 +15,14 @@
  */
 const ARTICLES = [
   {
+    id: "0017",
+    date: "2026-10-11",
+    categorie: "Comètes",
+    titre: "Les Orionides : les poussières de la comète de Halley dans notre ciel",
+    image: "https://www.sciencesetavenir.fr/assets/img/2023/12/22/cover-r4x3w1200-658599d2924f2-1016277main-eta1.jpg",
+    extrait: "Et si les étoiles filantes que vous observez en octobre provenaient d’une comète célèbre, dont le prochain passage près du Soleil n’est prévu qu’en 2061 ? Chaque année, la Terre traverse les poussières abandonnées par la comète de Halley, transformant ces minuscules fragments cosmiques en éclats lumineux. Découvrez l’origine des Orionides et comment observer ce spectacle céleste fascinant."
+  },
+  {
     id: "0016",
     date: "2026-10-10",
     categorie: "Physique",
