@@ -5,7 +5,7 @@ Chaque page est un **vrai fichier HTML** avec sa propre URL. Aucun build, tout e
 ## Structure (tout est à la racine, sauf les articles)
 
 ```
-index.html, calendrier.html, actus.html, wheretheiss.html, 404.html, sitemap.xml
+index.html, calendrier.html, actus.html, wheretheiss.html, a-propos.html, mentions-legales.html, 404.html, sitemap.xml
 orbite.css                  → TOUT le style
 site.js                     → en-tête, pied de page, assistant IA, étoiles (partagé)
 page-home.js, page-calendrier.js, page-actus.js, page-iss.js, page-articles.js, page-article.js

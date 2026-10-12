@@ -114,7 +114,7 @@ function actuAnchor(a) {
   </div>
   <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px; padding-top: 24px;">
     <span>Orbite © <span id="year-now"></span> — site personnel d'astronomie</span>
-    <span><a href="/mentions-legales.html" style="color:inherit;">Mentions légales</a> · Fait main, hébergé sur GitHub Pages</span>
+    <span><a href="/a-propos.html" style="color:inherit;">À propos</a> · <a href="/mentions-legales.html" style="color:inherit;">Mentions légales</a> · Fait main, hébergé sur GitHub Pages</span>
   </div>
 </footer>`;
   const chatHtml = `<!-- Assistant Orbite (chatbot IA) : relais Cloudflare Worker, voir le script en bas de page -->
