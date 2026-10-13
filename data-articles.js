@@ -20,7 +20,7 @@ const ARTICLES = [
     categorie: "Physique",
     titre: "Neutrino : la particule élémentaire qui cache bien des secrets",
     image: "https://rse.org.uk/wp-content/uploads/2022/10/DSC_3042-scaled-1-800x800.jpg",
-    extrait: "Pendant longtemps, les physiciens ont pensé que le neutrino n'avait absolument aucune masse. Pourtant, cette particule cache une propriété unique qui a bouleversé notre compréhension de l'infiniment petit : l'oscillation. Il existe trois types distincts de neutrinos, appelés « saveurs » : le neutrino électronique, le neutrino muonique et le neutrino tauïque. Au cours de leur voyage dans le vide spatial, les neutrinos ont la capacité surprenante de se métamorphoser et de changer de saveur en plein vol. Ce phénomène de transformation, validé par l'expérience, prouve mathématiquement que les neutrinos possèdent une masse, même si celle-ci reste des millions de fois plus petite que celle d'un électron."
+    extrait: "Des milliards de particules invisibles traversent votre corps chaque seconde, sans que vous ne le sachiez. Les neutrinos, véritables fantômes de l’Univers, traversent même la Terre presque sans rencontrer d’obstacle. Mais que cachent ces mystérieuses particules, capables de changer de nature en plein voyage ?"
   },
   {
     id: "0017",
