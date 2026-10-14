@@ -8,6 +8,13 @@
  */
 const ACTUS = [
   {
+    date: "2026-10-14",
+    titre: "Le rover Perseverance bat le record de distance parcourue sur Mars",
+    image: "https://www.cite-espace.com/assets/uploads/e1-20-20pia26812-20-20navcam-20record.jpg",
+    resume: "En franchissant le cap des 45,22 km sur Mars, le rover Perseverance a dépassé le record d'Opportunity. Fort de sa navigation autonome, le robot de la NASA entame désormais une nouvelle phase d'exploration du cratère Jezero, au moins jusqu'à la fin de l'année 2028.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-10-08",
     titre: "Margaret Hamilton, l’informaticienne d’Apollo, nous a quittés",
     image: "https://www.cite-espace.com/assets/uploads/hamilton-titre001.jpeg",
