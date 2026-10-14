@@ -10,7 +10,7 @@ const ACTUS = [
   {
     date: "2026-10-14",
     titre: "L'Ukraine affirme que SpaceX limite les opérations de Starlink, ce qui perturbe ses activités militaires",
-    image: "https://www.theguardian.com/world/2022/oct/17/pentagon-starlink-ukraine-musk-funding",
+    image: "https://www.24matins.fr/wp-content/uploads/2026/10/starlink.webp",
     resume: "SpaceX fait face à d'importantes tensions après avoir introduit des restrictions techniques sur son réseau Starlink. Selon des conseillers présidentiels ukrainiens, le service militaire a été suspendu pour les terminaux fonctionnant à des vitesses supérieures à 160 km/h. Cette mesure affecte directement le guidage des drones de combat ukrainiens sur le front.",
     source: "Boursorama",
   },
