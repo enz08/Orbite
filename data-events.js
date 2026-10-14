@@ -14,7 +14,21 @@ const EVENTS = [
     type: "lancement",
     titre: "Lancement de la station privée Heaven 1 de Vast Space",
     description: "Début janvier 2027, aura lieu le lancement de la première station orbitale privée. Ce petit module unique devrait être le tout premier avant-poste commercial privé en orbite. Une première mission habitée privé rejoindra la mini-station.",
-    visibilite: "Aucune"
+    visibilite: "Aucune information"
+   },
+   {
+      date: "2026-11-08",
+      type: "lancement",
+      titre: "Flight 15 Starship",
+      description: "Le prochain vol du Starship de SpaceX depuis la base de Starbase au Texas, selon les prévisions du trafic aérien (CADENA). Les véhicules pressentis sont le booster 22 (Super Heavy) et le Ship 42. SpaceX a un objectif majeur : tenter pour la première fois de <strong>rattraper les deux étages</strong> (le propulseur et le vaisseau) à l'aide des bras mécaniques de la tour de lancement ('Mechazilla').",
+      visibilite: "Site officiel de SpaceX, son compte X (ex-Twitter) et NASASpaceflight (YouTube)",
+   },
+   {
+      date: "2026-11-01",
+      type: "lancement",
+      titre: "Falcon Heavy / Astrobotic Griffin Lander",
+      description: "Lancement de Bandwagon-5 à bord du lanceur Falcon 9 depuis le Kennedy Space Center, emportant l'atterrisseur lunaire Griffin et le rover FLIP d'Astrolab vers le pôle Sud de la Lune.",
+      visbilite: "Site officiel de SpaceX, son compte X (ex-Twitter), NASA+ et NASA TV",
    },
    {
     date: "2026-10-27",
@@ -22,6 +36,20 @@ const EVENTS = [
     titre: "Occultation des Pléiades par la Lune",
     description: "La Lune passe directement devant l'amas d'étoiles des Pléiades (M45), masquant successivement plusieurs de ses jeunes astres.",
     visibilite: "Conditions de visibilité : Très bonnes mais nécessitant des instruments. Le phénomène sera facilement repérable car la Lune servira de guide. Cependant, la Lune sera brillante (pleine à environ 75%), ce qui signifie que son éclat va masquer les étoiles les plus faibles à l'œil nu. Pour apprécier pleinement la disparition et la réapparition successive des étoiles bleues derrière le disque lunaire, l'utilisation de jumelles ou d'un petit télescope est fortement recommandé. Visible à partir de 00h jusqu'a 6h00 du matin (heure de Paris), mais le moment le plus spectaculaire est attendu aux alentours de 3h30 du matin.",
+   },
+   {
+      date: "2026-10-19",
+      type: "lancement",
+      titre: "Bandwagon-5 (Falcon 9)",
+      description: "Lancement de Bandwagon-5 à bord du lanceur Falcon 9 depuis la Cape Canaveral Space Force Station (Floride), une mission de convoiturage spatial (rideshare) sur orbite à inclinaison moyenne.",
+      visbilite: "Site officiel de SpaceX, son compte X (ex-Twitter), NASA+ et NASA TV",
+   },
+   {
+      date: "2026-10-15",
+      type: "lancement",
+      titre: "USSF-481 (Falcon 9)",
+      description: "Lancement de USSF-481 à bord du lanceur Falcon 9 depuis la base de Vandenberg (Californie) pour la U.S. Space Force.",
+      visbilite: "Site officiel de SpaceX, son compte X (ex-Twitter), NASA+ et NASA TV",
    },
    {
     date: "2026-10-08",
