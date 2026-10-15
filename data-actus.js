@@ -9,6 +9,13 @@
 const ACTUS = [
   {
     date: "2026-10-15",
+    titre: "Voyageur 1, bientôt une journée lumière de distance avec la Terre",
+    image: "https://www.cite-espace.com/assets/uploads/voyager1-jour-lumiere-titre001-1170x678.jpeg",
+    resume: "Lancée en 1977, la sonde Voyager 1 de la NASA fonctionne toujours. S’éloignant sans cesse de nous, le 18 novembre, elle sera désormais à une journée-lumière de la Terre, soit 25,9 milliards de kilomètres.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
+    date: "2026-10-15",
     titre: "Christina Koch n’est plus une astronaute active de la NASA",
     image: "https://www.cite-espace.com/assets/uploads/christina-koch-release-oct-13.jpg",
     resume: "Après leur survol de la Lune, les quatre astronautes d'Artemis II s'orientent vers de nouvelles fonctions. La nomination de Christina Koch à la direction de l'ingénierie de la NASA par intérim confirme qu'aucun membre de cet équipage ne devrait retourner dans l'espace.",
