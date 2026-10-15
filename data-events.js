@@ -40,6 +40,13 @@ const EVENTS = [
    {
       date: "2026-10-19",
       type: "lancement",
+      titre: "MMX : une exploration inédite des lunes de Mars",
+      description: "Martian Moons eXploration est une mission conçue pour étudier les lunes de la planète rouge et ramener des échantillons de l’une d’elles, Phobos, ce qui n’a jamais été fait. Le décollage depuis le Japon est prévu à partir du 19 octobre.",
+      visibilite: "Chaîne YouTube du CNES au alentours de 20h"
+   },
+   {
+      date: "2026-10-19",
+      type: "lancement",
       titre: "Bandwagon-5 (Falcon 9)",
       description: "Lancement de Bandwagon-5 à bord du lanceur Falcon 9 depuis la Cape Canaveral Space Force Station (Floride), une mission de convoiturage spatial (rideshare) sur orbite à inclinaison moyenne.",
       visbilite: "Site officiel de SpaceX, son compte X (ex-Twitter), NASA+ et NASA TV",
