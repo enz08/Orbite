@@ -45,7 +45,7 @@ const EVENTS = [
       visibilite: "Chaîne YouTube du CNES au alentours de 20h"
    },
    {
-      date: "2026-10-19",
+      date: "2026-10-20",
       type: "lancement",
       titre: "Bandwagon-5 (Falcon 9)",
       description: "Lancement de Bandwagon-5 à bord du lanceur Falcon 9 depuis la Cape Canaveral Space Force Station (Floride), une mission de convoiturage spatial (rideshare) sur orbite à inclinaison moyenne.",
