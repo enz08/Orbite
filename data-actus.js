@@ -8,6 +8,13 @@
  */
 const ACTUS = [
   {
+    date: "2026-10-20",
+    titre: "La mission Bandwagon-5 de cette après-midi transportait la capsule Starfall !",
+    image: "https://media.pubninja.com/articles/brand-7/covers/1792436033791_b55cb5613e23.jpg",
+    resume: "Cette après-midi a décollé du complexe SLC-40 de Cape Canaveral la fusée Falcon 9 à 13h05 (heure de Paris). Après un report de SpaceX à cause des conditions météorologiques dans la zone maritime où le premier étage devait être récupéré, les 32 charges utiles dont la capsule expérimentale Starfall ont pu quitter le sol terrestre. Starfall, c'est une capsule expérimentale d'entrée atmosphérique développée par SpaceX. SpaceX montre encore une fois son avancée sur les innovations en utilisant pour la 19e fois le premier étage, identifié B1085.",
+    source: "SpaceX France"
+  },
+  {
     date: "2026-10-19",
     titre: "La « Clé de sol cosmique » révélée par la NASA",
     image: "https://i0.wp.com/btlv.fr/wp-content/uploads/2026/10/home-page-btlv-59.jpg?resize=720%2C810&ssl=1",
