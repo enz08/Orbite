@@ -15,6 +15,14 @@
  */
 const ARTICLES = [
   {
+    id: "0019",
+    date: "2026-10-20",
+    categorie: "Soleil",
+    titre: "Planètes errantes : ces mondes qui voyagent seuls dans l’obscurité",
+    image: "https://www.astrounivers.com/wp-content/uploads/2024/08/planetes-errantes.jpg",
+    extrait: "Sans étoile pour les éclairer, les planètes errantes traversent la galaxie. Découvrez comment ces mondes solitaires se forment, comment les astronomes les détectent et s’ils pourraient conserver des environnements favorables à la vie."
+  },
+  {
     id: "0018",
     date: "2026-10-13",
     categorie: "Physique",
