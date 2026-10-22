@@ -8,6 +8,27 @@
  */
 const ACTUS = [
   {
+    date: "2026-10-21",
+    titre: "Artemis : la nouvelle feuille de route des atterrisseurs lunaires",
+    image: "https://www.cite-espace.com/assets/uploads/header-site-cde-3-2-1170x572.jpg",
+    resume: "Lors du congrès IAC d'Antalya, la NASA a précisé le calendrier du développement des atterrisseurs lunaires d’Artemis. SpaceX et Blue Origin enchaîneront les tests en 2027. Des alunissages sans équipages sont prévus fin 2027 avant deux missions Artemis sur la Lune en 2028.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
+    date: "2026-10-21",
+    titre: "Il y a 25 ans : Claudie Haigneré, première Européenne à bord de l'ISS",
+    image: "https://www.cite-espace.com/assets/uploads/equipage-andromede-1170x678.jpg",
+    resume: "Du 21 au 31 octobre 2001 et au cours d’une mission baptisée Andromède, Claudie Haigneré devenait la première femme astronaute européenne à bord de la Station spatiale internationale. Son deuxième vol après celui vers Mir en 1996.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
+    date: "2026-10-20",
+    titre: "Euclid a découvert une cométe !",
+    image: "https://www.cite-espace.com/assets/uploads/euclid-comete-titre-1170x678.jpeg",
+    resume: "Bien qu’il ne soit pas conçu pour cette tâche, le télescope spatial européen Euclid a récemment détecté une comète jusque-là non répertoriée. Immatriculée C/2026 S1 (Euclid), elle est à 1,3 milliard de kilomètres de la Terre.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-10-20",
     titre: "La mission Bandwagon-5 de cette après-midi transportait la capsule Starfall !",
     image: "https://media.pubninja.com/articles/brand-7/covers/1792436033791_b55cb5613e23.jpg",
