@@ -8,6 +8,13 @@
  */
 const ACTUS = [
   {
+    date: "2026-10-26",
+    titre: "Artemis IV : la NASA choisira plus tard entre SpaceX et Blue Origin",
+    image: "https://www.cite-espace.com/assets/uploads/artemis4-options-titre.jpeg",
+    resume: "Au cours d’une conférence de presse du 23 octobre, la NASA a établi que le retour des Américains sur la Lune avec Artemis IV se fera soit avec le Starship, soit avec le Blue Moon MK2. Pour le moment, elle ne choisit pas entre ces deux options.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-10-21",
     titre: "Artemis : la nouvelle feuille de route des atterrisseurs lunaires",
     image: "https://www.cite-espace.com/assets/uploads/header-site-cde-3-2-1170x572.jpg",
