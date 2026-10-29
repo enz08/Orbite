@@ -8,6 +8,13 @@
  */
 const ACTUS = [
   {
+    date: "2026-10-29",
+    titre: "Hera : Dimorphos en vue",
+    image: "https://www.cite-espace.com/assets/uploads/hera-image-titre-1536x890.jpeg",
+    resume: "La sonde européenne Hera est en phase d’approche de l’astéroïde Didymos et de sa petite lune Dimorphos de 151 m de large. Le 27 octobre, l’ESA a publié la première image d’Hera montrant les deux objets distincts l’un de l’autre.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-10-26",
     titre: "Artemis IV : la NASA choisira plus tard entre SpaceX et Blue Origin",
     image: "https://www.cite-espace.com/assets/uploads/artemis4-options-titre.jpeg",
