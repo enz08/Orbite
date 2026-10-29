@@ -15,6 +15,14 @@
  */
 const ARTICLES = [
   {
+    id: "0029",
+    date: "2026-10-29",
+    categorie: "Nébuleuses",
+    titre: "La nébuleuse d'Orion (M42) : Le joyau du ciel d'hiver",
+    image: "https://www.stelvision.com/astro/wp-content/uploads/2018/12/M42-FBTW-1024x535.jpg",
+    extrait: "Au cœur de la constellation d'Orion se cache le secret le plus fascinant de notre ciel d'hiver : une gigantesque matrice cosmique où naissent les mondes de demain. Visible à l’œil nu à 1 340 années-lumière de la Terre, la nébuleuse M42 dévoile un spectacle grandiose de gaz incandescents et de poussières sombres. Véritable laboratoire à ciel ouvert, elle abrite le Trapèze — un quatuor d'étoiles féroces qui embrase le nuage — et des dizaines de systèmes planétaires en gestation. Plongez dans l'intimité de cette pouponnière d'étoiles, devenue l'icône absolue de l'exploration spatiale et de l'astrophotographie."
+  },
+  {
     id: "0019",
     date: "2026-10-20",
     categorie: "Soleil",
