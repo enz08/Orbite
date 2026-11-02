@@ -8,6 +8,13 @@
  */
 const ACTUS = [
   {
+    date: "2026-11-02",
+    titre: "🛰️ Flashback : il y a 26 ans l'ISS accueillait ses premiers occupants",
+    image: "https://www.reforme.net/wp-content/uploads/2024/08/ISS.jpg",
+    resume: "Il y a 26 ans, le 2 novembre 2000, la Station spatiale internationale (ISS) accueillait ses 3 premiers occupants : 2 cosmonautes russes et 1 astronaute américain. Sergueï Krikaliov, William Shepherd et Yuri Gidzenko sont restés à bord jusqu'au 6 mars 2001; soit +4 mois.",
+    source: "Hugo Décrypte - L'actu"
+  },
+  {
     date: "2026-10-29",
     titre: "Hera : Dimorphos en vue",
     image: "https://www.cite-espace.com/assets/uploads/hera-image-titre-1536x890.jpeg",
