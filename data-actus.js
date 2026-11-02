@@ -9,6 +9,13 @@
 const ACTUS = [
   {
     date: "2026-11-02",
+    titre: "La NASA réfléchit à une mission pour sauver Hubble",
+    image: "https://www.cite-espace.com/assets/uploads/27946391011-d40ff10573-h.jpg",
+    resume: "Face au déclin naturel de l'orbite du télescope Hubble, la NASA consulte les entreprises privées pour évaluer un rehaussement d'altitude d'ici 2032. Cette initiative vise à prolonger la mission de cet observatoire légendaire avant sa rentrée atmosphérique.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
+    date: "2026-11-02",
     titre: "🛰️ Flashback : il y a 26 ans l'ISS accueillait ses premiers occupants",
     image: "https://www.reforme.net/wp-content/uploads/2024/08/ISS.jpg",
     resume: "Il y a 26 ans, le 2 novembre 2000, la Station spatiale internationale (ISS) accueillait ses 3 premiers occupants : 2 cosmonautes russes et 1 astronaute américain. Sergueï Krikaliov, William Shepherd et Yuri Gidzenko sont restés à bord jusqu'au 6 mars 2001; soit +4 mois.",
