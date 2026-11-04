@@ -8,6 +8,13 @@
  */
 const ACTUS = [
   {
+    date: "2026-11-03",
+    titre: "« Vous n’êtes pas près de me voir prendre ma retraite », Sophie Adenot",
+    image: "https://www.cite-espace.com/assets/uploads/101645.jpg",
+    resume: "De retour de 8 mois dans l'ISS, Sophie Adenot a dressé le bilan de sa mission en conférence de presse. Entre réadaptation physique, coulisses de 414 h de science et ambitions vers la Lune, l'astronaute a partagé une expérience humaine et authentique.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-11-02",
     titre: "La NASA réfléchit à une mission pour sauver Hubble",
     image: "https://www.cite-espace.com/assets/uploads/27946391011-d40ff10573-h.jpg",
