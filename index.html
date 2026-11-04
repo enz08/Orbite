@@ -74,7 +74,7 @@
 <a class="promo-banner" id="promo-banner"
    href="https://my.nasa.gov/specialevents/s/send-your-name-with-dragonfly"
    target="_blank" rel="noopener noreferrer"
-   style="--promo-image: url('/images/bandeau-nasa.jpg');"
+   style="--promo-image: url('https://www.cite-espace.com/assets/uploads/dragonfly-site-web-noms-768x497.jpg');"
    data-fin="2027-01-15">
   <span class="promo-banner-inner">
     <span class="promo-banner-tag">Envoyez votre nom sur Titan avec Dragonfly !</span>
@@ -119,6 +119,16 @@
 <script src="/data-actus.js"></script>
 <script src="/data-articles.js"></script>
 <script src="/site.js"></script>
+
+<script>
+  (function () {
+    var b = document.getElementById("promo-banner");
+    if (!b) return;
+    var fin = new Date(b.dataset.fin + "T23:59:59");
+    if (new Date() > fin) b.remove();
+  })();
+</script>
+
 <script src="/page-home.js"></script>
 </body>
 </html>
