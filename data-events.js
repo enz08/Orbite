@@ -17,7 +17,7 @@ const EVENTS = [
     visibilite: "Aucune information"
    },
    {
-      date: "2026-11-08",
+      date: "2026-11-12",
       type: "lancement",
       titre: "Flight 15 Starship",
       description: "Le prochain vol du Starship de SpaceX depuis la base de Starbase au Texas, selon les prévisions du trafic aérien (CADENA). Les véhicules pressentis sont le booster 22 (Super Heavy) et le Ship 42. SpaceX a un objectif majeur : tenter pour la première fois de <strong>rattraper les deux étages</strong> (le propulseur et le vaisseau) à l'aide des bras mécaniques de la tour de lancement ('Mechazilla').",
