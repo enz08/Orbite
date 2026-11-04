@@ -1285,3 +1285,73 @@ h1, h2, h3 {
 .page-404 { padding: 96px 0; text-align: left; }
 .page-404 h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 12px 0; }
 .page-404 p { color: var(--text-dim); max-width: 46ch; }
+
+/* ---------- Bandeau promo provisoire (accueil) ---------- */
+.promo-banner {
+  position: relative;
+  z-index: 2;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: #0b0e17 var(--promo-image) center / cover no-repeat;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* Voile sombre pour que le texte reste lisible quelle que soit l'image */
+.promo-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(11, 14, 23, 0.85) 0%, rgba(11, 14, 23, 0.45) 100%);
+  transition: opacity 0.2s ease;
+}
+.promo-banner:hover::before { opacity: 0.85; }
+
+.promo-banner-inner {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 36px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.promo-banner-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #14140f;
+  background: var(--gold);
+  padding: 4px 10px;
+  border-radius: var(--radius);
+}
+
+.promo-banner-title {
+  flex: 1;
+  min-width: 220px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 3.2vw, 2rem);
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.promo-banner-cta {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #14140f;
+  background: var(--gold);
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+.promo-banner:hover .promo-banner-cta { background: #e0b769; }
+
+@media (max-width: 760px) {
+  .promo-banner-inner { padding: 26px 20px; gap: 14px; }
+}
