@@ -8,6 +8,20 @@
  */
 const ACTUS = [
   {
+    date: "2026-11-05",
+    titre: "Fin de mission pour le télescope spatial Swift",
+    image: "https://www.cite-espace.com/assets/uploads/swift-in-space-15-ac-1170x619.jpg",
+    resume: "Après l'échec de sa mission de sauvetage, le télescope spatial Swift de la NASA a effectué sa rentrée atmosphérique au-dessus de l'océan Indien après 22 ans de mission. Cet observatoire a révolutionné la compréhension des phénomènes les plus violents de l'Univers.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
+    date: "2026-11-05",
+    titre: "Le volcanisme de Mars ne serait pas éteint",
+    image: "https://www.cite-espace.com/assets/uploads/mars-volcanisme-titre001-1170x678.jpeg",
+    resume: "La sonde européenne ExoMars Trace Gas Orbiter (TGO) a détecté du chlorure d’hydrogène qui s’échappe de fissures dans la région d’Alba Mons. Il y aurait ainsi toujours une activité volcanique sur Mars.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-11-04",
     titre: "Lune : la Chine confirme son agenda",
     image: "https://www.cite-espace.com/assets/uploads/chine-agenda-titre.jpeg",
