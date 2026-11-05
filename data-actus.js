@@ -8,6 +8,20 @@
  */
 const ACTUS = [
   {
+    date: "2026-11-04",
+    titre: "Lune : la Chine confirme son agenda",
+    image: "https://www.cite-espace.com/assets/uploads/chine-agenda-titre.jpeg",
+    resume: "Le programme lunaire habité de la Chine s’affiche clairement depuis quelques années. Fin octobre, l’objectif de voir des astronautes chinois marcher sur la Lune avant 2030 a été officiellement confirmé.",
+    source: "Cité de l'espace"
+  },
+  {
+    date: "2026-11-04",
+    titre: "CHAPEA 2 : Fin de la simulation martienne de 378 jours de la NASA",
+    image: "https://www.cite-espace.com/assets/uploads/header-site-cde-5.jpg",
+    resume: "Après 378 jours d'isolement simulé dans l'habitat Mars Dune Alpha à Houston, les quatre volontaires de la mission CHAPEA 2 de la NASA ont quitté leur logement. Ils ont réalisé des expériences, fait pousser des végétaux et communiquaient avec 22 minutes de délai avec la Terre.",
+    source: "Cité de l'espace - Toulouse"
+  },
+  {
     date: "2026-11-03",
     titre: "« Vous n’êtes pas près de me voir prendre ma retraite », Sophie Adenot",
     image: "https://www.cite-espace.com/assets/uploads/101645.jpg",
