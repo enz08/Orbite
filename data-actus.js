@@ -101,7 +101,7 @@ const ACTUS = [
   {
     date: "2026-10-19",
     titre: "La « Clé de sol cosmique » révélée par la NASA",
-    image: "https://i0.wp.com/btlv.fr/wp-content/uploads/2026/10/home-page-btlv-59.jpg?resize=720%2C810&ssl=1",
+    image: "/assets/actus/2026-10-19-la-cle-de-sol-cosmique-revelee.webp",
     resume: "La NASA a mis à l'honneur aujourd'hui une image composite spectaculaire prise par les télescopes Chandra et eROSITA. Elle révèle un « phénix radio » géant – une structure de résidus de trous noirs qui dessine une clé de sol parfaite dans l'espace à 1,55 milliard d'années-lumière.",
     source: "SpaceX"
   },
