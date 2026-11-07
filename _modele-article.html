@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <!--
   =====================  MODÈLE D'ARTICLE ORBITE  =====================
-  1. Copie ce fichier en  articles/00XX.html  (ex. articles/0014.html) : dans GitHub, Add file > Create new file, nom "articles/0014.html".
-     Le nom du fichier = l'URL : www.orbite.kdns.fr/articles/0014
-  2. Remplace tous les {{...}} (Ctrl+H → cherche "{{" pour ne rien oublier).
-     Ils sont à 4 endroits : <head> (titre, description, canonical, JSON-LD),
-     catégorie / titre / date / image, et le texte dans <div class="body">.
-  3. Le TITRE, l'EXTRAIT et la DATE doivent être identiques à l'entrée que tu
-     ajoutes dans data-articles.js (c'est elle qui alimente la liste /articles/).
-  4. Ajoute l'URL dans sitemap.xml.
+  1. Dépose l'image dans  assets/articles/00XX.jpg  (même numéro que l'article).
+  2. Ajoute l'entrée EN HAUT de data-articles.js (id, date, categorie, titre,
+     extrait, image: "/assets/articles/00XX.jpg"). C'est LA source unique :
+     la catégorie, le titre, la date et l'image de la page s'y remplissent
+     automatiquement grâce à  <body data-id="00XX">.
+  3. Copie ce fichier en  articles/00XX.html  et remplace les {{...}} du <head>
+     (Ctrl+H → cherche "{{") : ils servent uniquement au référencement Google
+     et aux aperçus sur les réseaux (les robots ne lisent pas le JavaScript).
+  4. Écris le texte dans <div class="body">.
+  5. Ajoute l'URL dans sitemap.xml.
   Ce fichier commence par "_" : GitHub Pages (Jekyll) ne le publie pas.
   ===================================================================
 -->
@@ -17,7 +19,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{TITRE}} — Orbite</title>
-<meta name="description" content="{{EXTRAIT : 1 à 2 phrases, 150 caractères environ}}">
+<meta name="description" content="{{EXTRAIT : 1 à 2 phrases, 150 caractères environ, sans balise HTML}}">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Orbite">
 <link rel="canonical" href="https://www.orbite.kdns.fr/articles/{{ID}}">
@@ -28,15 +30,13 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://www.orbite.kdns.fr/articles/{{ID}}">
 <meta property="og:title" content="{{TITRE}} — Orbite">
-<meta property="og:description" content="{{EXTRAIT : 1 à 2 phrases, 150 caractères environ}}">
-<meta property="og:image" content="https://www.orbite.kdns.fr/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Orbite — almanach du ciel">
+<meta property="og:description" content="{{EXTRAIT}}">
+<meta property="og:image" content="https://www.orbite.kdns.fr/assets/articles/{{ID}}.jpg">
+<meta property="og:image:alt" content="{{TITRE}}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{TITRE}} — Orbite">
-<meta name="twitter:description" content="{{EXTRAIT : 1 à 2 phrases, 150 caractères environ}}">
-<meta name="twitter:image" content="https://www.orbite.kdns.fr/og-image.png">
+<meta name="twitter:description" content="{{EXTRAIT}}">
+<meta name="twitter:image" content="https://www.orbite.kdns.fr/assets/articles/{{ID}}.jpg">
 
 <!-- Favicons -->
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -55,7 +55,7 @@
   "@type": "Article",
   "headline": "{{TITRE}}",
   "datePublished": "{{DATE_ISO}}",
-  "image": "{{IMAGE_URL}}",
+  "image": "https://www.orbite.kdns.fr/assets/articles/{{ID}}.jpg",
   "inLanguage": "fr-FR",
   "author": { "@type": "Organization", "name": "Orbite" },
   "publisher": { "@type": "Organization", "name": "Orbite" },
@@ -65,7 +65,7 @@
 <link rel="stylesheet" href="/orbite.css">
 <script src="/maintenance.js"></script>
 </head>
-<body data-page="article">
+<body data-page="article" data-id="{{ID}}">
 <div id="site-header"></div>
 
 <main id="main">
@@ -73,10 +73,12 @@
     <div class="wrap">
       <article class="article-detail" id="article-detail">
         <a class="back-btn" href="/articles/">&larr; Retour aux articles</a>
-        <span class="cat">{{CATEGORIE}}</span>
-        <h1>{{TITRE}}</h1>
-        <div class="meta"><time datetime="{{DATE_ISO}}">{{DATE_LONGUE : ex. 6 octobre 2026}}</time></div>
-        <img class="hero-image" src="{{IMAGE_URL}}" alt="{{DESCRIPTION DE L'IMAGE}}">  <!-- pas d'image ? supprime cette ligne ET la ligne "image" du JSON-LD -->
+
+        <!-- Rempli automatiquement depuis data-articles.js (via data-id) -->
+        <span class="cat"></span>
+        <h1></h1>
+        <div class="meta"><time></time></div>
+        <img class="hero-image" alt="">
 
         <div class="body">
           <h3>{{PREMIER SOUS-TITRE}}</h3>
@@ -90,17 +92,17 @@
         </div>
 
         <div class="article-avis">
-      <p class="avis-question">Qu'avez-vous pensé de cet article ?</p>
-      <div class="avis-buttons">
-        <button type="button" class="avis-btn" data-vote="up" aria-label="J'ai aimé cet article">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3v11zM7 11l4.5-8a1.5 1.5 0 0 1 2.7.9v5.1h5.4a2 2 0 0 1 2 2.3l-1.3 8a2 2 0 0 1-2 1.7H7"/></svg>
-        </button>
-        <button type="button" class="avis-btn" data-vote="down" aria-label="Je n'ai pas aimé cet article">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg);"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3v11zM7 11l4.5-8a1.5 1.5 0 0 1 2.7.9v5.1h5.4a2 2 0 0 1 2 2.3l-1.3 8a2 2 0 0 1-2 1.7H7"/></svg>
-        </button>
-      </div>
-      <p class="avis-merci hidden">Merci pour votre avis ! Ça nous aide beaucoup !</p>
-    </div>
+          <p class="avis-question">Qu'avez-vous pensé de cet article ?</p>
+          <div class="avis-buttons">
+            <button type="button" class="avis-btn" data-vote="up" aria-label="J'ai aimé cet article">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3v11zM7 11l4.5-8a1.5 1.5 0 0 1 2.7.9v5.1h5.4a2 2 0 0 1 2 2.3l-1.3 8a2 2 0 0 1-2 1.7H7"/></svg>
+            </button>
+            <button type="button" class="avis-btn" data-vote="down" aria-label="Je n'ai pas aimé cet article">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg);"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3v11zM7 11l4.5-8a1.5 1.5 0 0 1 2.7.9v5.1h5.4a2 2 0 0 1 2 2.3l-1.3 8a2 2 0 0 1-2 1.7H7"/></svg>
+            </button>
+          </div>
+          <p class="avis-merci hidden">Merci pour votre avis ! Ça nous aide beaucoup !</p>
+        </div>
       </article>
     </div>
   </section>
