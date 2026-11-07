@@ -155,7 +155,7 @@ const ARTICLES = [
     date: "2026-08-29",
     categorie: "Cosmologie",
     titre: "Pourquoi l’Univers est-il en expansion ? Et vers quoi s’étend-il ?",
-    image: "https://sciencespourtous.univ-lyon1.fr/files/2021/03/Etoiles-univers_MChuniaud.jpg",
+    image: "https://cdn.slate.fr/uploads/store/story_113729/large_landscape_113729.jpg",
     extrait: "Depuis près d’un siècle, les astronomes savent que l’Univers est en expansion. Les galaxies lointaines s’éloignent globalement les unes des autres. Mais si l’Univers grandit, vers quoi s’étend-il ? La réponse est bien plus étrange qu’une simple explosion dans l’espace."
   },
   {
