@@ -22,8 +22,10 @@ Aucune bibliotheque a installer.
 import os
 import re
 import shutil
+import ssl
 import sys
 import unicodedata
+import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 
@@ -70,6 +72,11 @@ def slug(titre):
     return t[:30].strip("-")
 
 
+def fetch(req, context=None):
+    with urllib.request.urlopen(req, timeout=25, context=context) as r:
+        return r.headers.get_content_type(), r.read()
+
+
 def download(url, subdir, base):
     """Retourne le chemin local (/assets/...) ou None si echec."""
     if url in cache:
@@ -86,11 +93,25 @@ def download(url, subdir, base):
     p = urlparse(url)
     headers = {"User-Agent": UA, "Accept": "image/*,*/*;q=0.8",
                "Referer": "%s://%s/" % (p.scheme, p.netloc)}
+    req = urllib.request.Request(url, headers=headers)
     try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=25) as r:
-            ctype = r.headers.get_content_type()
-            data = r.read()
+        ctype, data = fetch(req)
+    except urllib.error.URLError as e:
+        if isinstance(getattr(e, "reason", None), ssl.SSLError):
+            # Certificat du site mal configure (frequent sous Windows) :
+            # on reessaie sans verification, uniquement pour telecharger une image publique.
+            try:
+                ctx = ssl.create_default_context()
+                ctx.check_hostname = False
+                ctx.verify_mode = ssl.CERT_NONE
+                ctype, data = fetch(req, ctx)
+                print("   (certificat du site non verifiable, telechargement quand meme)")
+            except Exception as e2:
+                print("   ECHEC (%s)" % e2)
+                return None
+        else:
+            print("   ECHEC (%s)" % e)
+            return None
     except Exception as e:
         print("   ECHEC (%s)" % e)
         return None
