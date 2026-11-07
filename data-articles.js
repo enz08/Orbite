@@ -19,7 +19,7 @@ const ARTICLES = [
   date: "2026-11-07",
   categorie: "Système solaire",
   titre: "Saturne : les secrets de la planète aux mille mystères",
-  image: "https://www.sciencesetavenir.fr/assets/img/2019/09/13/cover-r4x3w1200-5d7b8dfa26703-heic1917a.jpg",
+  image: "/assets/articles/0021.jpg",
   extrait: "Des <strong>anneaux spectaculaires</strong> aux océans cachés d'Encelade, en passant par les lacs de méthane de Titan et un mystérieux hexagone polaire : découvrez les secrets de Saturne."
   },
   {
@@ -27,7 +27,7 @@ const ARTICLES = [
     date: "2026-10-29",
     categorie: "Nébuleuses",
     titre: "La nébuleuse d'Orion (M42) : Le joyau du ciel d'hiver",
-    image: "https://www.stelvision.com/astro/wp-content/uploads/2018/12/M42-FBTW-1024x535.jpg",
+    image: "/assets/articles/0020.jpg",
     extrait: "Au cœur de la constellation d'Orion se cache le secret le plus fascinant de notre ciel d'hiver : une gigantesque matrice cosmique où naissent les mondes de demain. Visible à l’œil nu à 1 340 années-lumière de la Terre, la nébuleuse M42 dévoile un spectacle grandiose de gaz incandescents et de poussières sombres. Véritable laboratoire à ciel ouvert, elle abrite le Trapèze — un quatuor d'étoiles féroces qui embrase le nuage — et des dizaines de systèmes planétaires en gestation. Plongez dans l'intimité de cette pouponnière d'étoiles, devenue l'icône absolue de l'exploration spatiale et de l'astrophotographie."
   },
   {
@@ -35,7 +35,7 @@ const ARTICLES = [
     date: "2026-10-20",
     categorie: "Soleil",
     titre: "Planètes errantes : ces mondes qui voyagent seuls dans l’obscurité",
-    image: "https://www.astrounivers.com/wp-content/uploads/2024/08/planetes-errantes.jpg",
+    image: "/assets/articles/0019.jpg",
     extrait: "Sans étoile pour les éclairer, les planètes errantes traversent la galaxie. Découvrez comment ces mondes solitaires se forment, comment les astronomes les détectent et s’ils pourraient conserver des environnements favorables à la vie."
   },
   {
@@ -43,7 +43,7 @@ const ARTICLES = [
     date: "2026-10-13",
     categorie: "Physique",
     titre: "Neutrino : la particule élémentaire qui cache bien des secrets",
-    image: "https://rse.org.uk/wp-content/uploads/2022/10/DSC_3042-scaled-1-800x800.jpg",
+    image: "/assets/articles/0018.jpg",
     extrait: "Des milliards de particules invisibles traversent votre corps chaque seconde, sans que vous ne le sachiez. Les neutrinos, véritables fantômes de l’Univers, traversent même la Terre presque sans rencontrer d’obstacle. Mais que cachent ces mystérieuses particules, capables de changer de nature en plein voyage ?"
   },
   {
@@ -51,7 +51,7 @@ const ARTICLES = [
     date: "2026-10-11",
     categorie: "Comètes",
     titre: "Les Orionides : les poussières de la comète de Halley dans notre ciel",
-    image: "https://www.mopnantes.fr/wp-content/uploads/2023/10/Comete-de-Halley-visible.jpg",
+    image: "/assets/articles/0017.jpg",
     extrait: "Et si les étoiles filantes que vous observez en octobre provenaient d’une comète célèbre, dont le prochain passage près du Soleil n’est prévu qu’en 2061 ? Chaque année, la Terre traverse les poussières abandonnées par la comète de Halley, transformant ces minuscules fragments cosmiques en éclats lumineux. Découvrez l’origine des Orionides et comment observer ce spectacle céleste fascinant."
   },
   {
@@ -59,7 +59,7 @@ const ARTICLES = [
     date: "2026-10-10",
     categorie: "Physique",
     titre: "Pourquoi le temps ne s’écoule-t-il pas de la même façon partout ?",
-    image: "https://img.src.ca/2011/05/05/635x357/110505_0083m_einstein-effet-geodetique_sn635.jpg",
+    image: "/assets/articles/0016.jpg",
     extrait: "Nous avons l’impression que le temps s’écoule au même rythme pour tout le monde. Pourtant, la relativité d’Einstein montre que le temps peut passer différemment selon la vitesse d’un objet et l’intensité de la gravité à laquelle il est soumis."
   },
   {
@@ -67,7 +67,7 @@ const ARTICLES = [
     date: "2026-10-10",
     categorie: "Système Solaire",
     titre: "Le jour où le Soleil mourra : à quoi ressemblera la fin du Système solaire ?",
-    image: "https://storage.ghost.io/c/d0/6f/d06f3f13-bb97-4d11-a063-07ea8f7bc595/content/images/size/w1140/2026/03/naine-blanche.webp",
+    image: "/assets/articles/0015.webp",
     extrait: "Le Soleil semble éternel, mais comme toutes les étoiles, il finira par évoluer. Dans plusieurs milliards d’années, il deviendra une géante rouge avant de rejeter ses couches externes et de terminer sa vie sous la forme d’une naine blanche."
   },
   {
@@ -75,7 +75,7 @@ const ARTICLES = [
     date: "2026-10-09",
     categorie: "Exobiologie",
     titre: "Comment trouver une civilisation extraterrestre ?",
-    image: "https://www.journaldugeek.com/app/uploads/2026/06/Alien-IA.jpg",
+    image: "/assets/articles/0014.jpg",
     extrait: "Sommes-nous seuls dans l’Univers ? Des ondes radio mystérieuses aux traces possibles d’une technologie extraterrestre, les scientifiques explorent des pistes fascinantes pour détecter d’autres civilisations. SETI, sphères de Dyson, atmosphères d’exoplanètes… Découvrez comment l’humanité tente de percer l’un des plus grands mystères du cosmos."
   },
   {
@@ -83,7 +83,7 @@ const ARTICLES = [
     date: "2026-10-06",
     categorie: "Trous de ver",
     titre: "La théorie des trous de ver",
-    image: "https://www.quebecscience.qc.ca/wp-content/uploads/2024/05/black-hole-7760643-1920-e1717770435354.jpg",
+    image: "/assets/articles/0013.webp",
     extrait: "Un trou de ver (en anglais : wormhole, ou parfois pont d’Einstein-Rosen) est, en astrophysique, un objet hypothétique qui relierait deux feuillets distincts ou deux régions distinctes de l'espace-temps et se manifesterait, d'un côté, comme un trou noir et, de l'autre côté, comme un trou blanc."
   }, 
   {
@@ -91,7 +91,7 @@ const ARTICLES = [
   date: "2026-10-03",
   categorie: "Multivers",
   titre: "Et si notre Univers n'était pas le seul ?",
-  image: "https://www.meteorologiaenred.com/wp-content/uploads/2023/11/cual-es-el-significado-de-multiverso.jpg",
+  image: "/assets/articles/0012.jpg",
   extrait: "Les <strong>multivers</strong> : inflation éternelle, univers-bulles, interprétations de la mécanique quantique, etc. Si un autre Univers comme le nôtre existait ?"
   },
   {
@@ -99,7 +99,7 @@ const ARTICLES = [
   date: "2026-05-02",
   categorie: "Exploration",
   titre: "Artemis II, comprendre la mission",
-  image: "https://news.cgtn.com/news/2026-01-18/NASA-moves-moon-rocket-to-launch-pad-ahead-of-Artemis-2-mission-1K1HneXF9ks/img/b65bebb47ec44c4bb6ea606ee53cf54f/b65bebb47ec44c4bb6ea606ee53cf54f.png",
+  image: "/assets/articles/0011.png",
   extrait: "Quatre astronautes, un vol autour de la Lune, un objectif : préparer le retour d'un équipage à la surface lunaire. Le point sur cette étape clé du programme Artemis."
   },
   {
@@ -107,7 +107,7 @@ const ARTICLES = [
     date: "2026-06-15",
     categorie: "Débuter",
     titre: "Choisir ses premières jumelles d'astronomie",
-    image: "https://francois-lachal-astronomie.fr/wp-content/uploads/2023/10/img-26final-1024x683.jpg",
+    image: "/assets/articles/0010.jpg",
     extrait: "Pas besoin d'un télescope pour commencer : de bonnes jumelles suffisent pour explorer la Lune, Jupiter et ses lunes, ou les grands amas d'étoiles."
   },
   {
@@ -115,7 +115,7 @@ const ARTICLES = [
     date: "2026-08-01",
     categorie: "Observation",
     titre: "Bien préparer l'éclipse totale du 12 août",
-    image: "https://media.zenfs.com/fr/femme_actuelle_335/d2444217307052c555f856be3b2fc8d8",
+    image: "/assets/articles/0009.jpg",
     extrait: "Lunettes certifiées, lieu d'observation, horaires : tout ce qu'il faut savoir pour vivre l'événement de l'année dans de bonnes conditions."
   },
   {
@@ -123,7 +123,7 @@ const ARTICLES = [
     date: "2026-08-16",
     categorie: "Exoplanètes",
     titre: "Exoplanètes : ces mondes au-delà du Système solaire",
-    image: "https://www.fredzone.org/wp-content/uploads/2022/01/Exoplanete.jpg",
+    image: "/assets/articles/0008.jpg",
     extrait: "Depuis la découverte de la première exoplanète autour d'une étoile semblable au Soleil en 1995, les astronomes ont confirmé plus de 6 000 de ces mondes. Certaines sont rocheuses, d'autres sont des géantes gazeuses, et certaines orbitent leur étoile en seulement quelques jour."
   },
   {
@@ -131,7 +131,7 @@ const ARTICLES = [
     date: "2026-08-18",
     categorie: "Cosmologie",
     titre: "La TERRE avait autrefois un anneau !",
-    image: "https://cdn.pixabay.com/photo/2024/09/24/06/53/planet-9070580_640.png",
+    image: "/assets/articles/0007.png",
     extrait: "Saturne est une planète très connue pour ses anneaux qui sont au nombre de sept. Elle n'est pas la seule à en posséder, Neptune en a cinq et Jupiter en compte trois. Uranus est la plus fournie avec pas moins de treize anneaux. Ces derniers sont composés de petites particules et de poussières qui sont en orbite autour des planètes. Selon une récente étude dans la revue <a href='https://eps.berkeley.edu/' target= '_blank'>Earth & Planetary Sciences</a>."
   },
   {
@@ -147,7 +147,7 @@ const ARTICLES = [
     date: "2026-08-20",
     categorie: "Lune",
     titre: "Que se passerait-il si la Lune disparaissait demain ?",
-    image: "https://media.ouest-france.fr/v1/pictures/8cf1ea4fc13582c54a6b59f857ff6ca7-11843806.jpg?width=1260&client_id=eds&sign=c660ec523d6398e32fea05a6a9cd4291b58a85a25067888bd67028d07b3d4c34",
+    image: "/assets/articles/0005.jpg",
     extrait: "La Lune accompagne la Terre depuis des milliards d’années et influence notamment les marées. Mais que se passerait-il si elle disparaissait soudainement ? Les conséquences seraient importantes pour les océans, certains écosystèmes et l’évolution à long terme de notre planète."
   },
   {
@@ -155,7 +155,7 @@ const ARTICLES = [
     date: "2026-08-29",
     categorie: "Cosmologie",
     titre: "Pourquoi l’Univers est-il en expansion ? Et vers quoi s’étend-il ?",
-    image: "https://cdn.slate.fr/uploads/store/story_113729/large_landscape_113729.jpg",
+    image: "/assets/articles/0004.jpg",
     extrait: "Depuis près d’un siècle, les astronomes savent que l’Univers est en expansion. Les galaxies lointaines s’éloignent globalement les unes des autres. Mais si l’Univers grandit, vers quoi s’étend-il ? La réponse est bien plus étrange qu’une simple explosion dans l’espace."
   },
   {
@@ -163,7 +163,7 @@ const ARTICLES = [
     date: "2026-08-29",
     categorie: "Trous noirs",
     titre: "Les trous noirs sont-ils vraiment des “aspirateurs cosmiques” ?",
-    image: "https://champagne.kidiklik.fr/sites/default/files/styles/crop_image/public/2023-07/csm_black-hole-fromthegrapewine_9a0ece1405_1.jpg?itok=ZCxKoXLc",
+    image: "/assets/articles/0003.jpg",
     extrait: "Les trous noirs sont souvent représentés comme d’immenses aspirateurs capables d’engloutir tout ce qui les entoure. Pourtant, cette image est trompeuse. Leur gravité est extrême, mais un trou noir ne se comporte pas comme un aspirateur géant."
   },
   {
@@ -171,7 +171,7 @@ const ARTICLES = [
     date: "2026-08-29",
     categorie: "Exobiologie",
     titre: "Sommes-nous capables de détecter une civilisation extraterrestre ?",
-    image: "https://img-4.linternaute.com/jUcfDoP8dTYT9X_2pwKQHP8NtQM=/1500x/smart/e42e4e5b507d471da9c228198dbb66be/ccmcms-linternaute/10765684.jpg",
+    image: "/assets/articles/0002.jpg",
     extrait: "Si une civilisation intelligente existe ailleurs dans la galaxie, comment pourrions-nous la trouver ? Les scientifiques recherchent notamment des signaux radio et des technosignatures, mais aucune preuve confirmée d’une civilisation extraterrestre n’a encore été découverte."
   },
   {
@@ -179,7 +179,7 @@ const ARTICLES = [
     date: "2026-08-28",
     categorie: "Exobiologie",
     titre: "Une planète peut-elle exister sans étoile ?",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbEQADxQQ7yGQQ5ISUXBav3WbrR0QgIkqvR16BG8frgg&s=10",
+    image: "/assets/articles/0001.jpg",
     extrait: "Toutes les planètes que nous connaissons dans notre voisinage cosmique tournent autour d’une étoile. Pourtant, certaines planètes pourraient voyager seules dans la galaxie, sans soleil pour les éclairer. Ces mondes mystérieux sont appelés planètes errantes."
   }
 ];
