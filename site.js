@@ -404,3 +404,40 @@ drawStars();
     if (btn) ask(btn.textContent);
   });
 })();
+/* -------------------------------------------------------------------- */
+/* Pages d'article : catégorie, titre, date et image viennent de        */
+/* data-articles.js (grâce à <body data-id="0021">)                     */
+/* -------------------------------------------------------------------- */
+(function fillArticleFromData() {
+  const detail = document.getElementById("article-detail");
+  const id = document.body.dataset.id;
+  if (!detail || !id || typeof ARTICLES === "undefined") return;
+  const a = ARTICLES.find((x) => x.id === id);
+  if (!a) return;
+
+  const cat = detail.querySelector(".cat");
+  if (cat) cat.textContent = a.categorie;
+  const h1 = detail.querySelector("h1");
+  if (h1) h1.textContent = a.titre;
+  const time = detail.querySelector(".meta time");
+  if (time) {
+    time.setAttribute("datetime", a.date);
+    time.textContent = fmtDateLong(a.date);
+  }
+
+  let img = detail.querySelector(".hero-image");
+  if (a.image) {
+    if (!img) {
+      img = document.createElement("img");
+      img.className = "hero-image";
+      const meta = detail.querySelector(".meta");
+      if (meta) meta.after(img);
+      else detail.appendChild(img);
+    }
+    img.src = a.image;
+    img.alt = a.titre;
+    img.addEventListener("error", () => img.remove()); // image absente : on masque au lieu d'afficher une icône cassée
+  } else if (img) {
+    img.remove();
+  }
+})();
