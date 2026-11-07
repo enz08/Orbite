@@ -139,7 +139,7 @@ const ARTICLES = [
     date: "2026-08-20",
     categorie: "Exobiologie",
     titre: "Et si la Terre n’était pas la seule planète à avoir de l’eau ?",
-    image: "https://www.cyclope.ovh/wp-content/uploads/2025/03/mars-eau-3.webp",
+    image: "/assets/articles/0006.webp",
     extrait: "Sur Terre, l’eau liquide est l’un des éléments essentiels à la vie. Mais notre planète est-elle vraiment la seule à en posséder ? Plusieurs lunes glacées du Système solaire pourraient abriter d’immenses océans sous leur surface gelée, faisant d’elles des endroits particulièrement intéressants dans la recherche de vie extraterrestre."
   },
   {
