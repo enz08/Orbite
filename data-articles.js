@@ -15,6 +15,14 @@
  */
 const ARTICLES = [
   {
+  id: "0021",
+  date: "2026-11-07",
+  categorie: "Système solaire",
+  titre: "Saturne : les secrets de la planète aux mille mystères",
+  image: "https://www.sciencesetavenir.fr/assets/img/2019/09/13/cover-r4x3w1200-5d7b8dfa26703-heic1917a.jpg",
+  extrait: "Des <strong>anneaux spectaculaires</strong> aux océans cachés d'Encelade, en passant par les lacs de méthane de Titan et un mystérieux hexagone polaire : découvrez les secrets de Saturne."
+  },
+  {
     id: "0020",
     date: "2026-10-29",
     categorie: "Nébuleuses",
